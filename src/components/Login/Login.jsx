@@ -37,7 +37,8 @@ const Login = () => {
               </label>
             </p>
             <p className="cursor-pointer">Forget Password</p>
-          </div>
+        </div>
+                  
           <button className="bg-primary py-2 mt-7 w-full text-secondary rounded active:scale-95 font-bold">
             Login
           </button>

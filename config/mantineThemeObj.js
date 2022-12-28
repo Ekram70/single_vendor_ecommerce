@@ -10,8 +10,8 @@ const mantineThemeObj = {
       '#f7ac22',
       '#ffa600', //background color
       '#dd9208', //hover color
-      '#c4840e',
-      '#ae7813',
+      '#ffa600', //dark background color
+      '#dd9208', //dark hover  color
     ],
   },
   cursorType: 'pointer',

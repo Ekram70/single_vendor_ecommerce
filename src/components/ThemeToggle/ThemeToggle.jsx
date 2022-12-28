@@ -1,0 +1,24 @@
+import { ActionIcon, useMantineColorScheme } from "@mantine/core";
+import { IconMoonStars, IconSun } from "@tabler/icons";
+
+function ThemeToggle() {
+  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
+  const dark = colorScheme === "dark";
+
+  return (
+    <ActionIcon
+      // color="yellow"
+      onClick={() => toggleColorScheme()}
+      title="Toggle color scheme"
+      className="h-8 w-8"
+    >
+      {dark ? (
+        <IconSun className="stroke-primary" />
+      ) : (
+        <IconMoonStars className="stroke-secondary" />
+      )}
+    </ActionIcon>
+  );
+}
+
+export default ThemeToggle;

@@ -7,9 +7,6 @@ module.exports = {
         primary: '#F2B33B',
         secondary: '#2D2D2D',
       },
-      fontFamily: {
-        noto: ['Noto Sans', 'sans-serif'],
-      },
     },
   },
   plugins: [],

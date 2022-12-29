@@ -17,7 +17,6 @@ import {
 import React from "react";
 import { Link } from "react-router-dom";
 import bgImage from "../../assets/images/pattern.jpg";
-
 import MainHeader from "../MainHeader/MainHeader";
 
 const Login = () => {
@@ -32,8 +31,8 @@ const Login = () => {
       } bg-[length:400px_400px] bg-left-top bg-repeat bg-blend-multiply 2xl:bg-auto`}
     >
       <MainHeader />
-      <Center className="h-screen w-full">
-        <Paper className="max-w-[450px] rounded-lg bg-white p-8 text-sm text-secondary drop-shadow-lg sm:rounded-2xl sm:p-14">
+      <Center className="w-full py-32">
+        <Paper className="max-w-[450px] rounded-lg bg-white p-8 text-sm text-secondary shadow-lg sm:rounded-2xl sm:p-14">
           <Title
             order={3}
             className="text-center text-xl font-bold sm:text-2xl"
@@ -41,10 +40,10 @@ const Login = () => {
             Login to Your Account
           </Title>
           <Divider className="my-2.5 mx-auto h-0.5 w-44 border-0 bg-primary" />
-          <form className="mt-11">
-            <Box component="div">
+          <form className="mt-11 space-y-7">
+            <Box>
               <Text component="label" className="font-medium">
-                Enter Email
+                Email
               </Text>
               <Input
                 variant="filled"
@@ -55,7 +54,7 @@ const Login = () => {
                 }}
               />
             </Box>
-            <Box component="div" className="mt-7">
+            <Box>
               <Text component="label" className="font-medium">
                 Password
               </Text>
@@ -70,7 +69,7 @@ const Login = () => {
               />
             </Box>
 
-            <Group position="apart" className="mt-4 items-start">
+            <Group position="apart" className="items-start">
               <Checkbox
                 label="Remember Me"
                 size="xs"
@@ -89,10 +88,8 @@ const Login = () => {
               </Text>
             </Group>
 
-            <Button className="mt-7 w-full rounded py-2 font-bold">
-              Login
-            </Button>
-            <Text component="p" className="mt-2 text-center">
+            <Button className="w-full rounded py-2 font-bold">Login</Button>
+            <Text component="p" className="text-center">
               Don't have an account?{" "}
               <Anchor component={Link} to="/register">
                 Sign Up

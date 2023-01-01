@@ -10,6 +10,7 @@ import {
 } from "@mantine/core";
 import { IconSearch, IconUser } from "@tabler/icons";
 import React from "react";
+import { Link } from "react-router-dom";
 import logoBlack from "../../assets/images/logo-black.svg";
 import logoWhite from "../../assets/images/logo-white.svg";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
@@ -56,8 +57,9 @@ const MainHeader = () => {
                 />
               </ActionIcon>
               <Anchor
-                component="button"
+                component={Link}
                 type="button"
+                to="/login"
                 className={`font-bold ${
                   dark ? "text-primary" : "text-secondary"
                 }`}

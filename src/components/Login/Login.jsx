@@ -18,10 +18,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import bgImage from "../../assets/images/pattern.jpg";
 import MainHeader from "../MainHeader/MainHeader";
+// import { useColorScheme } from "@mantine/hooks";
 
 const Login = () => {
   const { colorScheme } = useMantineColorScheme();
   const dark = colorScheme === "dark";
+  // const color = useColorScheme();
 
   return (
     <BackgroundImage
@@ -32,8 +34,12 @@ const Login = () => {
     >
       <MainHeader />
       <Center className="w-full py-32">
-        <Paper className="max-w-[450px] rounded-lg bg-white p-8 text-sm text-secondary shadow-lg sm:rounded-2xl sm:p-14">
+        <Paper
+          className={` ${dark ? "bg-[#1A1B1E] text-white" : "bg-neutral-100"}
+        max-w-[450px] rounded-lg  p-8 text-sm text-secondary shadow-lg sm:rounded-2xl sm:p-14`}
+        >
           <Title
+            color={colorScheme === "dark" ? "white" : "black"}
             order={3}
             className="text-center text-xl font-bold sm:text-2xl"
           >
@@ -42,20 +48,27 @@ const Login = () => {
           <Divider className="my-2.5 mx-auto h-0.5 w-44 border-0 bg-primary" />
           <form className="mt-11 space-y-7">
             <Box>
-              <Text component="label" className="font-medium">
+              <Text
+                component="label"
+                className="font-medium"
+                color={colorScheme === "dark" ? "white" : "black"}
+              >
                 Email
               </Text>
               <Input
                 variant="filled"
                 placeholder="john@gmail.com"
                 classNames={{
-                  input:
-                    "rounded bg-gray-200 p-2 sm:text-base placeholder-gray-400",
+                  input: "rounded p-2 sm:text-base placeholder-gray-400",
                 }}
               />
             </Box>
             <Box>
-              <Text component="label" className="font-medium">
+              <Text
+                component="label"
+                className="font-medium"
+                color={colorScheme === "dark" ? "white" : "black"}
+              >
                 Password
               </Text>
               <PasswordInput
@@ -69,7 +82,11 @@ const Login = () => {
               />
             </Box>
 
-            <Group position="apart" className="items-start">
+            <Group
+              position="apart"
+              className="items-start"
+              color={colorScheme === "dark" ? "white" : "black"}
+            >
               <Checkbox
                 label="Remember Me"
                 size="xs"
@@ -81,17 +98,26 @@ const Login = () => {
 
               <Text
                 component="a"
-                href="#"
+                href="/forgetpassword"
                 className="text-xs font-medium sm:text-sm"
+                color={colorScheme === "dark" ? "white" : "black"}
               >
                 Forget Password
               </Text>
             </Group>
 
             <Button className="w-full rounded py-2 font-bold">Login</Button>
-            <Text component="p" className="text-center">
+            <Text
+              component="p"
+              className="text-center"
+              color={colorScheme === "dark" ? "white" : "black"}
+            >
               Don't have an account?{" "}
-              <Anchor component={Link} to="/register">
+              <Anchor
+                component={Link}
+                to="/register"
+                color={colorScheme === "dark" ? "white" : "black"}
+              >
                 Sign Up
               </Anchor>
             </Text>

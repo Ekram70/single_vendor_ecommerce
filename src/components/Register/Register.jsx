@@ -16,10 +16,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import bgImage from "../../assets/images/pattern.jpg";
 import MainHeader from "../MainHeader/MainHeader";
+// import { useColorScheme } from "@mantine/hooks";
 
 const Register = () => {
   const { colorScheme } = useMantineColorScheme();
   const dark = colorScheme === "dark";
+  // const color = useColorScheme();
   return (
     <BackgroundImage
       src={bgImage}
@@ -29,17 +31,26 @@ const Register = () => {
     >
       <MainHeader />
       <Center className="w-full py-32">
-        <Paper className="max-w-[450px] rounded-lg bg-white p-8 text-sm text-secondary shadow-lg sm:rounded-2xl sm:p-14">
+        <Paper
+          className={`${
+            dark ? "bg-[#1A1B1E] text-white" : "bg-neutral-100"
+          } max-w-[450px] rounded-lg  p-8 text-sm text-secondary shadow-lg sm:rounded-2xl sm:p-14`}
+        >
           <Title
             order={3}
             className="text-center text-xl font-bold sm:text-2xl"
+            color={colorScheme === "dark" ? "white" : "black"}
           >
             Create Your Account
           </Title>
           <Divider className="mx-auto my-2.5 h-0.5 w-44 border-0 bg-primary" />
           <form className="mt-11 space-y-7">
             <Box>
-              <Text component="label" className="my-1 font-medium">
+              <Text
+                component="label"
+                className="my-1 font-medium"
+                color={colorScheme === "dark" ? "white" : "black"}
+              >
                 Full Name
               </Text>
               <Input
@@ -53,7 +64,11 @@ const Register = () => {
               ></Input>
             </Box>
             <Box>
-              <Text component="label" className="my-1 font-medium">
+              <Text
+                component="label"
+                className="my-1 font-medium"
+                color={colorScheme === "dark" ? "white" : "black"}
+              >
                 Email
               </Text>
               <Input
@@ -66,7 +81,11 @@ const Register = () => {
               ></Input>
             </Box>
             <Box>
-              <Text component="label" className="font-medium">
+              <Text
+                component="label"
+                className="font-medium"
+                color={colorScheme === "dark" ? "white" : "black"}
+              >
                 Password
               </Text>
               <PasswordInput
@@ -79,7 +98,11 @@ const Register = () => {
               />
             </Box>
             <Box>
-              <Text component="label" className="font-medium">
+              <Text
+                component="label"
+                className="font-medium"
+                color={colorScheme === "dark" ? "white" : "black"}
+              >
                 Confirm Password
               </Text>
               <PasswordInput
@@ -91,12 +114,23 @@ const Register = () => {
                 }}
               />
             </Box>
-            <Button className="w-full rounded py-2 font-bold">
+            <Button
+              className="w-full rounded py-2 font-bold"
+              color={colorScheme === "dark" ? "white" : "black"}
+            >
               Create Account
             </Button>
-            <Text component="p" className="text-center">
+            <Text
+              component="p"
+              className="text-center"
+              color={colorScheme === "dark" ? "white" : "black"}
+            >
               Already have an account?{" "}
-              <Anchor component={Link} to="/login">
+              <Anchor
+                component={Link}
+                to="/login"
+                color={colorScheme === "dark" ? "white" : "black"}
+              >
                 Sign In
               </Anchor>
             </Text>

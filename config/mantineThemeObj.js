@@ -1,5 +1,6 @@
 const mantineThemeObj = {
   activeStyles: { transform: "scale(0.95)" },
+  black: "#2D2D2D",
   colors: {
     brand: [
       "#f0debc",
@@ -11,8 +12,15 @@ const mantineThemeObj = {
       "#ffa600", //background color
       "#dd9208", //hover color
       "#ffa600", //dark background color
-      "#dd9208", //dark hover  color
+      "#dd9208", //dark hover color
     ],
+  },
+  components: {
+    Anchor: {
+      classNames: {
+        root: "text-sm font-semibold",
+      },
+    },
   },
   cursorType: "pointer",
   defaultGradient: {

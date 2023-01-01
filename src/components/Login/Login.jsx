@@ -18,6 +18,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import bgImage from "../../assets/images/pattern.jpg";
 import MainHeader from "../MainHeader/MainHeader";
+import MainNavbar from "../MainNavbar/MainNavbar";
 // import { useColorScheme } from "@mantine/hooks";
 
 const Login = () => {
@@ -33,6 +34,7 @@ const Login = () => {
       } bg-[length:400px_400px] bg-left-top bg-repeat bg-blend-multiply 2xl:bg-auto`}
     >
       <MainHeader />
+      <MainNavbar />
       <Center className="w-full py-32">
         <Paper
           className={` ${dark ? "bg-[#1A1B1E] text-white" : "bg-neutral-100"}

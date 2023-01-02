@@ -42,7 +42,7 @@ const MainHeader = () => {
 
   return (
     <Header>
-      <Container className="max-w-[1200px] py-2">
+      <Container className="w-full max-w-[1200px] py-2">
         <Group position="apart" className="gap-10">
           <Image
             src={dark ? logoBlack : logoWhite}

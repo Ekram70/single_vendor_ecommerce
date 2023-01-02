@@ -133,7 +133,7 @@ const categories = [
       },
       {
         label: "Diabetic Food",
-        subSubCategories: [],
+        subSubCategories: null,
       },
     ],
   },
@@ -142,47 +142,47 @@ const categories = [
     subCategories: [
       {
         label: "Dishwashing Supplies",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Laundry",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Toilet Cleaners",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Napkins & Paper Products",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Pest Control",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Floor & Glass Cleaners",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Cleaning Accessories",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Air Freshners",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Disposables & Trash Bags",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Shoe Care",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Trash Bin & Basket",
-        subSubCategories: [],
+        subSubCategories: null,
       },
     ],
   },
@@ -227,7 +227,7 @@ const categories = [
       },
       {
         label: "Tissue & Wipes",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Oral Care",
@@ -247,11 +247,11 @@ const categories = [
       },
       {
         label: "Talcom Powder",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Hair Color",
-        subSubCategories: [],
+        subSubCategories: null,
       },
     ],
   },
@@ -260,47 +260,47 @@ const categories = [
     subCategories: [
       {
         label: "Keto Food",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Antiseptics",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Handwash & Handrub",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Herbal & Digestive Aids",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Food Supplements",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Face Masks & Safety",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Family Planning",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Mouthwashed, Inhaler & Balm",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Adult Diapers",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Multipurpose Spray",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Medical Devices",
-        subSubCategories: [],
+        subSubCategories: null,
       },
     ],
   },
@@ -327,27 +327,27 @@ const categories = [
       },
       {
         label: "Baby Skincare",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Wipes",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Baby Oral Care",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Newborn Essentials",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Baby Accessories",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Feeders",
-        subSubCategories: [],
+        subSubCategories: null,
       },
     ],
   },
@@ -356,39 +356,39 @@ const categories = [
     subCategories: [
       {
         label: "Kitchen Accessories",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Kitchen Appliances",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Lights & Electrical",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Tools & HardWare",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Basket & Bucket",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Box & Container",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Gardening",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Rack & Organizer",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Disposables",
-        subSubCategories: [],
+        subSubCategories: null,
       },
     ],
   },
@@ -432,7 +432,7 @@ const categories = [
       },
       {
         label: "School Supplies",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Arts & Crafts",
@@ -449,31 +449,31 @@ const categories = [
     subCategories: [
       {
         label: "Cat Food",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Cat Litters",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Kitten Food",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Dog Food",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Grooming & Cleaning",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Bird & Other Pet Food",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Aquarium Fish Food",
-        subSubCategories: [],
+        subSubCategories: null,
       },
     ],
   },
@@ -482,43 +482,43 @@ const categories = [
     subCategories: [
       {
         label: "Exercise & Fitness",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Toy Vehicles",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Dolls & Action Figures",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Plush & stuffed Animals",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Learning Toys",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Blocks & Building Sets",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Kids Books",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Sports",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Board Game",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Party Supplies",
-        subSubCategories: [],
+        subSubCategories: null,
       },
     ],
   },
@@ -527,23 +527,23 @@ const categories = [
     subCategories: [
       {
         label: "Eyes",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Lips",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Nails",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Tools & Brushes",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Face",
-        subSubCategories: [],
+        subSubCategories: null,
       },
     ],
   },
@@ -552,33 +552,33 @@ const categories = [
     subCategories: [
       {
         label: "Clothing Essentials",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Money Bags",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Travel Accessories",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Bedding & Blankets",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Baby Clothes",
-        subSubCategories: [],
+        subSubCategories: null,
       },
       {
         label: "Ladies Handbags",
-        subSubCategories: [],
+        subSubCategories: null,
       },
     ],
   },
   {
     label: "Vehicle Essentials",
-    subCategories: [],
+    subCategories: null,
   },
 ];
 

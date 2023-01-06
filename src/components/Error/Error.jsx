@@ -2,7 +2,6 @@ import { BackgroundImage, useMantineColorScheme } from "@mantine/core";
 import React from "react";
 import bgImage from "../../assets/images/pattern.jpg";
 import MainHeader from "../MainHeader/MainHeader";
-import MainNavbar from "../MainNavbar/MainNavbar";
 
 const Error = () => {
   const { colorScheme } = useMantineColorScheme();
@@ -13,7 +12,7 @@ const Error = () => {
       className={` bg-left-top bg-repeat bg-blend-multiply 2xl:bg-auto`}
     >
       <MainHeader />
-      <MainNavbar />
+
       <div className="h-screen w-full bg-gray-800">
         <div className="flex items-center justify-center py-12">
           <div className="mx-4 flex w-full items-center justify-center rounded-md border bg-white md:w-2/3">

@@ -1,5 +1,5 @@
 import { ColorSchemeProvider, MantineProvider } from "@mantine/core";
-import { useLocalStorage } from "@mantine/hooks";
+import { useColorScheme, useLocalStorage } from "@mantine/hooks";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import mantineThemeObj from "../config/mantineThemeObj";
 import Error from "./components/Error/Error";
@@ -11,9 +11,10 @@ import ResetPassword from "./components/ResetPassword/ResetPassword";
 import Home from "./pages/Home";
 
 function App() {
+  const defaultColorScheme = useColorScheme();
   const [colorScheme, setColorScheme] = useLocalStorage({
     key: "mantine-color-scheme",
-    defaultValue: "light",
+    defaultValue: defaultColorScheme,
     getInitialValueInEffect: true,
   });
 

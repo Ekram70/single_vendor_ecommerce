@@ -14,7 +14,6 @@ import { useColorScheme } from "@mantine/hooks";
 import React from "react";
 import bgImage from "../../assets/images/pattern.jpg";
 import MainHeader from "../MainHeader/MainHeader";
-import MainNavbar from "../MainNavbar/MainNavbar";
 
 const ResetPassword = () => {
   const { colorScheme } = useMantineColorScheme();
@@ -27,7 +26,6 @@ const ResetPassword = () => {
         bg-[length:400px_400px] bg-left-top bg-repeat bg-blend-multiply 2xl:bg-auto`}
     >
       <MainHeader />
-      <MainNavbar />
       <Center className=" w-full py-32">
         <Paper
           className={`${

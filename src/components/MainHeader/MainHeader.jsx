@@ -33,6 +33,7 @@ import logoBlack from "../../assets/images/logo-black.svg";
 import logoWhite from "../../assets/images/logo-white.svg";
 import productPic from "../../assets/images/product.png";
 import profilePic from "../../assets/images/profile.png";
+import BrowseAllCategories from "../BrowseAllCategories/BrowseAllCategories";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 const MainHeader = () => {
@@ -50,9 +51,11 @@ const MainHeader = () => {
             className="!w-12"
           />
 
+          <BrowseAllCategories />
+
           <TextInput
             placeholder="Search for items..."
-            className="hidden grow md:block"
+            className="grow"
             classNames={{
               root: "max-w-[650px]",
               rightSection: "w-10",
@@ -199,23 +202,6 @@ const MainHeader = () => {
             <ThemeToggle />
           </Group>
         </Group>
-        <TextInput
-          placeholder="Search for items..."
-          className="mx-auto mt-4 grow md:hidden"
-          classNames={{
-            root: "max-w-[650px]",
-            rightSection: "w-10",
-          }}
-          rightSection={
-            <ActionIcon
-              variant="filled"
-              color="brand"
-              className="h-full w-full rounded-l-none"
-            >
-              <IconSearch className="h-6 w-6 stroke-secondary" />
-            </ActionIcon>
-          }
-        />
       </Container>
     </Header>
   );

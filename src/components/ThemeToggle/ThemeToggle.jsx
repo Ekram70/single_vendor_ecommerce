@@ -7,7 +7,6 @@ function ThemeToggle() {
 
   return (
     <ActionIcon
-      // color="yellow"
       onClick={() => toggleColorScheme()}
       title="Toggle color scheme"
       className="h-6 w-6"

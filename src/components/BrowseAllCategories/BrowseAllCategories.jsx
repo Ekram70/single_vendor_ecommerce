@@ -6,7 +6,6 @@ const BrowseAllCategories = () => {
   return (
     <Box>
       <HoverCard
-        initiallyOpened
         withArrow
         classNames={{
           dropdown: "!min-w-[200px] p-0",

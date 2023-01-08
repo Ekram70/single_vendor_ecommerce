@@ -2,54 +2,18 @@ import {
   Button,
   Center,
   Divider,
-  Group,
   Paper,
-  TextInput,
   Title,
+  useMantineColorScheme,
 } from "@mantine/core";
-import React, { useEffect, useRef, useState } from "react";
 
-let currentOtpIndex = 0;
+import React, { useState } from "react";
+import OtpInput from "react-otp-input";
 
 const Otp = () => {
-  const [otp, setOtp] = useState(["", "", "", ""]);
-  const [activeOtpIndex, setActiveOtpIndex] = useState(0);
-  const inputRef = useRef(null);
-
-  useEffect(() => {
-    inputRef.current?.focus();
-  }, [activeOtpIndex]);
-
-  const handleChange = (e) => {
-    const newOtp = [...otp];
-    const { value } = e.target;
-
-    newOtp[currentOtpIndex] = value;
-    setOtp(newOtp);
-  };
-
-  const handleKeyDown = (e, idx) => {
-    const { key } = e;
-    currentOtpIndex = idx;
-
-    if (key === "Backspace") {
-      if (currentOtpIndex > 0) {
-        setActiveOtpIndex(currentOtpIndex - 1);
-      }
-    } else if (key === "ArrowRight") {
-      if (currentOtpIndex < 3) {
-        setActiveOtpIndex(currentOtpIndex - 1);
-      }
-    } else if (key === "ArrowLeft") {
-      if (currentOtpIndex > 0) {
-        setActiveOtpIndex(currentOtpIndex - 1);
-      }
-    } else {
-      if (currentOtpIndex < 3) {
-        setActiveOtpIndex(currentOtpIndex + 1);
-      }
-    }
-  };
+  const [otp, setOtp] = useState("");
+  const { colorScheme } = useMantineColorScheme();
+  const dark = colorScheme === "dark";
 
   return (
     <Center className="min-h-[calc(100vh-55px)] w-full p-5 sm:p-10">
@@ -65,23 +29,19 @@ const Otp = () => {
         <Title order={5} className="my-5 text-center">
           Enter the 4 digits code that you have received on your email.
         </Title>
-        <Group className="my-4 mt-11 gap-0 rounded-lg" position="apart">
-          {otp.map((value, idx) => (
-            <TextInput
-              key={idx}
-              maxLength={1}
-              value={value}
-              ref={idx === activeOtpIndex ? inputRef : null}
-              onChange={handleChange}
-              onKeyDown={(e) => handleKeyDown(e, idx)}
-              classNames={{
-                input:
-                  "text-center text-xl w-14 h-14 sm:w-16 sm:h-16 rounded-lg shadow-md",
-              }}
-            />
-          ))}
-        </Group>
 
+        <OtpInput
+          shouldAutoFocus
+          isInputNum
+          value={otp}
+          onChange={(val) => setOtp(val)}
+          numInputs={4}
+          containerStyle="my-4 mt-11 justify-between"
+          inputStyle={`h-12 !w-12 rounded border-none ${
+            dark ? "bg-[#2C2E33]" : "bg-[#F1F3F5]"
+          } text-xl sm:h-16 sm:!w-16 p-0`}
+          focusStyle="outline outline-primary outline-2"
+        />
         <Button className="w-full rounded py-2 font-bold">Continue</Button>
       </Paper>
     </Center>

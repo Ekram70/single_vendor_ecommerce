@@ -3,12 +3,12 @@ import { useColorScheme, useLocalStorage } from "@mantine/hooks";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import mantineThemeObj from "../config/mantineThemeObj";
 import Error from "./components/Error/Error";
-import ForgetPassword from "./components/ForgetPassword/ForgetPassword";
-import Login from "./components/Login/Login";
-import OtpComponents from "./components/OtpComponents/OtpComponents";
-import Register from "./components/Register/Register";
-import ResetPassword from "./components/ResetPassword/ResetPassword";
-import Home from "./pages/Home";
+import ForgotPasswordPage from "./pages/ForgotPasswordPage";
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import OtpPage from "./pages/OtpPage";
+import RegisterPage from "./pages/RegisterPage";
+import ResetPasswordPage from "./pages/ResetPasswordPage";
 
 function App() {
   const defaultColorScheme = useColorScheme();
@@ -33,12 +33,12 @@ function App() {
       >
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/resetpassword" element={<ResetPassword />} />
-            <Route path="/forgetpassword" element={<ForgetPassword />} />
-            <Route path="/otpcomponents" element={<OtpComponents />} />
-            <Route path="/register" element={<Register />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/reset" element={<ResetPasswordPage />} />
+            <Route path="/forget" element={<ForgotPasswordPage />} />
+            <Route path="/otp" element={<OtpPage />} />
+            <Route path="/register" element={<RegisterPage />} />
             <Route path="*" element={<Error />} />
           </Routes>
         </BrowserRouter>

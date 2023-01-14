@@ -3,13 +3,13 @@ import { useColorScheme, useLocalStorage } from "@mantine/hooks";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import mantineThemeObj from "../config/mantineThemeObj";
 import Error from "./components/Error/Error";
-import AdmindashBord from "./pages/AdmindashBord";
 import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import OtpPage from "./pages/OtpPage";
 import RegisterPage from "./pages/RegisterPage";
 import ResetPasswordPage from "./pages/ResetPasswordPage";
+import UserDashBoard from "./pages/UserDashBoard";
 
 function App() {
   const defaultColorScheme = useColorScheme();
@@ -37,10 +37,10 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/reset" element={<ResetPasswordPage />} />
-            <Route path="/forget" element={<ForgotPasswordPage />} />
+            <Route path="/forgot" element={<ForgotPasswordPage />} />
             <Route path="/otp" element={<OtpPage />} />
             <Route path="/register" element={<RegisterPage />} />
-            <Route path="/admindashbord" element={<AdmindashBord />} />
+            <Route path="/dashboard" element={<UserDashBoard />} />
             <Route path="*" element={<Error />} />
           </Routes>
         </BrowserRouter>

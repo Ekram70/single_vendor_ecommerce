@@ -1,4 +1,11 @@
-import { Navbar, createStyles } from "@mantine/core";
+import {
+  Anchor,
+  Box,
+  Container,
+  Navbar,
+  Text,
+  useMantineColorScheme,
+} from "@mantine/core";
 import {
   IconAdjustments,
   IconBasket,
@@ -9,98 +16,53 @@ import {
   IconStar,
 } from "@tabler/icons";
 import React, { useState } from "react";
-const useStyles = createStyles((theme, _params, getRef) => {
-  const icon = getRef("icon");
-  return {
-    link: {
-      ...theme.fn.focusStyles(),
-      display: "flex",
-      alignItems: "center",
-      textDecoration: "none",
-      fontSize: theme.fontSizes.sm,
-      color:
-        theme.colorScheme === "dark"
-          ? theme.colors.dark[1]
-          : theme.colors.gray[7],
-      padding: `${theme.spacing.xs}px ${theme.spacing.sm}px`,
-      borderRadius: theme.radius.sm,
-      fontWeight: 500,
+import { Link } from "react-router-dom";
 
-      "&:hover": {
-        backgroundColor:
-          theme.colorScheme === "dark"
-            ? theme.colors.dark[6]
-            : theme.colors.gray[0],
-        color: theme.colorScheme === "dark" ? theme.white : theme.black,
-
-        [`& .${icon}`]: {
-          color: theme.colorScheme === "dark" ? theme.white : theme.black,
-        },
-      },
-    },
-
-    linkIcon: {
-      ref: icon,
-      color:
-        theme.colorScheme === "dark"
-          ? theme.colors.dark[2]
-          : theme.colors.gray[6],
-      marginRight: theme.spacing.sm,
-    },
-
-    linkActive: {
-      "&, &:hover": {
-        backgroundColor: theme.fn.variant({
-          variant: "light",
-          color: theme.primaryColor,
-        }).background,
-        color: theme.fn.variant({ variant: "light", color: theme.primaryColor })
-          .color,
-        [`& .${icon}`]: {
-          color: theme.fn.variant({
-            variant: "light",
-            color: theme.primaryColor,
-          }).color,
-        },
-      },
-    },
-  };
-});
 const data = [
-  { link: "/home", label: "Dashboard", icon: IconGauge },
-  { link: "/order", label: "Order History", icon: IconAdjustments },
-  { link: "", label: " My Orders", icon: IconBasket },
-  { link: "", label: " Reviews", icon: IconStar },
-  { link: "", label: " Order Tracking", icon: IconHistory },
-  { link: "", label: " Settings", icon: IconSettings },
+  { link: "", label: "Dashboard", icon: IconGauge },
+  { link: "", label: "Order History", icon: IconAdjustments },
+  { link: "", label: "My Orders", icon: IconBasket },
+  { link: "", label: "Reviews", icon: IconStar },
+  { link: "", label: "Order Tracking", icon: IconHistory },
+  { link: "", label: "Settings", icon: IconSettings },
   { link: "", label: "Logout", icon: IconLogout },
 ];
 
 const SideNavbar = () => {
-  const { classes, cx } = useStyles();
+  const { colorScheme } = useMantineColorScheme();
+  const dark = colorScheme === "dark";
   const [active, setActive] = useState("Dashboard");
-  const links = data.map((item) => (
-    <a
-      className={cx(classes.link, {
-        [classes.linkActive]: item.label === active,
-      })}
-      href={item.link}
-      key={item.label}
-      onClick={(event) => {
-        event.preventDefault();
-        setActive(item.label);
-      }}
-    >
-      <item.icon className={classes.linkIcon} stroke={1.5} />
-      <span>{item.label}</span>
-    </a>
-  ));
+
   return (
-    <div>
-      <Navbar className="my-3 h-screen" width={{ sm: 300 }} p="md">
-        <Navbar.Section grow>{links}</Navbar.Section>
-      </Navbar>
-    </div>
+    <Box component="section">
+      <Container className="w-full max-w-[700px] lg:max-w-[1200px]">
+        <Navbar className="h-screen max-w-[250px] px-2 pt-5">
+          {data &&
+            data.map((singleData, idx) => (
+              <Anchor
+                key={idx}
+                component={Link}
+                onClick={(event) => {
+                  event.preventDefault();
+                  setActive(singleData.label);
+                }}
+                className={`${
+                  active === singleData.label
+                    ? dark
+                      ? "bg-primary/10 text-primary/80"
+                      : "bg-primary/40"
+                    : dark
+                    ? "text-white/50 hover:bg-secondary/50"
+                    : "text-secondary/70 hover:bg-secondary/5 hover:text-black/80"
+                } flex items-center rounded p-2 font-medium hover:no-underline`}
+              >
+                <singleData.icon className="mr-3" />
+                <Text component="span">{singleData.label}</Text>
+              </Anchor>
+            ))}
+        </Navbar>
+      </Container>
+    </Box>
   );
 };
 

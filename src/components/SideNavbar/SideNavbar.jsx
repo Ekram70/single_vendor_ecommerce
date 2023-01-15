@@ -1,7 +1,6 @@
 import {
   Anchor,
   Box,
-  Container,
   Navbar,
   Text,
   useMantineColorScheme,
@@ -34,34 +33,32 @@ const SideNavbar = () => {
   const [active, setActive] = useState("Dashboard");
 
   return (
-    <Box component="section">
-      <Container className="w-full max-w-[700px] lg:max-w-[1200px]">
-        <Navbar className="h-screen max-w-[250px] px-2 pt-5">
-          {data &&
-            data.map((singleData, idx) => (
-              <Anchor
-                key={idx}
-                component={Link}
-                onClick={(event) => {
-                  event.preventDefault();
-                  setActive(singleData.label);
-                }}
-                className={`${
-                  active === singleData.label
-                    ? dark
-                      ? "bg-primary/10 text-primary/80"
-                      : "bg-primary/40"
-                    : dark
-                    ? "text-white/50 hover:bg-secondary/50"
-                    : "text-secondary/70 hover:bg-secondary/5 hover:text-black/80"
-                } flex items-center rounded p-2 font-medium hover:no-underline`}
-              >
-                <singleData.icon className="mr-3" />
-                <Text component="span">{singleData.label}</Text>
-              </Anchor>
-            ))}
-        </Navbar>
-      </Container>
+    <Box component="aside" className="basis-[20%]">
+      <Navbar className="h-screen max-w-[250px] px-2 pt-5">
+        {data &&
+          data.map((singleData, idx) => (
+            <Anchor
+              key={idx}
+              component={Link}
+              onClick={(event) => {
+                event.preventDefault();
+                setActive(singleData.label);
+              }}
+              className={`${
+                active === singleData.label
+                  ? dark
+                    ? "bg-primary/10 text-primary/80"
+                    : "bg-primary/40"
+                  : dark
+                  ? "text-white/50 hover:bg-secondary/50"
+                  : "text-secondary/70 hover:bg-secondary/5 hover:text-black/80"
+              } flex items-center rounded p-2 font-medium hover:no-underline`}
+            >
+              <singleData.icon className="mr-3" />
+              <Text component="span">{singleData.label}</Text>
+            </Anchor>
+          ))}
+      </Navbar>
     </Box>
   );
 };

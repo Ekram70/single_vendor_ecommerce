@@ -1,24 +1,21 @@
+import { Container, Group } from "@mantine/core";
 import React from "react";
-// import DashbordCard from "../components/DashbordCard/DashbordCard";
+import DashboardCard from "../components/DashboardCard/DashboardCard";
 import DashbordHeader from "../components/DashbordHeader/DashbordHeader";
 import MainHeader from "../components/MainHeader/MainHeader";
 import SideNavbar from "../components/SideNavbar/SideNavbar";
-// import UserOrdersTable from "../components/UserOrdersTable/UserOrdersTable";
 
 const UserDashBoard = () => {
   return (
     <>
       <MainHeader />
       <DashbordHeader />
-      <SideNavbar />
-
-      {/* <Grid>
-        <Grid.Col><SideNavbar /></Grid.Col>
-        <Grid.Col>
-          <DashbordCard />
-          <UserOrdersTable />
-        </Grid.Col>
-      </Grid> */}
+      <Container className="max-w-[700px] lg:max-w-[1200px]">
+        <Group className="items-start" noWrap>
+          <SideNavbar />
+          <DashboardCard />
+        </Group>
+      </Container>
     </>
   );
 };

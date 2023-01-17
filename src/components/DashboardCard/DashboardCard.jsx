@@ -16,17 +16,17 @@ const DashboardCard = () => {
   ];
 
   return (
-    <Box component="main" className="basis-[80%] px-2 pt-5">
-      <Group className="mb-10">
-        <Title order={2} className="text-2xl">
+    <Box component="main" className="px-2 pt-5 lg:basis-[78%] ">
+      <Box className="mb-5">
+        <Title order={2} className="mb-2 text-2xl">
           Dashboard
         </Title>
-        <Text className="text-sm">
+        <Text className="text-sm font-medium">
           From your account dashboard. you can easily check & view your recent
           orders, manage your shipping and billing addresses and edit your
           password and account details.
         </Text>
-      </Group>
+      </Box>
 
       <Group>
         {mockdata &&

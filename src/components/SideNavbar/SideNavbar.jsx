@@ -18,8 +18,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const data = [
-  { link: "", label: "Dashboard", icon: IconGauge },
-  { link: "", label: "Order History", icon: IconAdjustments },
+  { link: "/dashboard", label: "Dashboard", icon: IconGauge },
+  { link: "/orderhistory", label: "Order History", icon: IconAdjustments },
   { link: "", label: "My Orders", icon: IconBasket },
   { link: "", label: "Reviews", icon: IconStar },
   { link: "", label: "Order Tracking", icon: IconHistory },
@@ -30,18 +30,19 @@ const data = [
 const SideNavbar = () => {
   const { colorScheme } = useMantineColorScheme();
   const dark = colorScheme === "dark";
+
   const [active, setActive] = useState("Dashboard");
 
   return (
-    <Box component="aside" className="basis-[20%]">
-      <Navbar className="h-screen max-w-[250px] px-2 pt-5">
+    <Box component="aside" className="lg:basis-[18%]">
+      <Navbar className="border-0 px-2 pt-5">
         {data &&
           data.map((singleData, idx) => (
             <Anchor
               key={idx}
               component={Link}
-              onClick={(event) => {
-                event.preventDefault();
+              to={singleData.link}
+              onClick={() => {
                 setActive(singleData.label);
               }}
               className={`${

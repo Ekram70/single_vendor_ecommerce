@@ -1,12 +1,12 @@
 import { Container, Group } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import React from "react";
-import DashboardCard from "../components/DashboardCard/DashboardCard";
 import DashbordHeader from "../components/DashbordHeader/DashbordHeader";
 import MainHeader from "../components/MainHeader/MainHeader";
 import SideNavbar from "../components/SideNavbar/SideNavbar";
+import UserOrderTable from "../components/UserOrderTable/UserOrderTable";
 
-const UserDashBoard = () => {
+const UserOrderHistory = () => {
   const matches = useMediaQuery("(min-width: 992px)");
 
   return (
@@ -16,11 +16,11 @@ const UserDashBoard = () => {
       <Container className="max-w-[700px] lg:max-w-[1200px]">
         <Group className="items-start" position="apart">
           {matches && <SideNavbar />}
-          <DashboardCard />
+          <UserOrderTable />
         </Group>
       </Container>
     </>
   );
 };
 
-export default UserDashBoard;
+export default UserOrderHistory;

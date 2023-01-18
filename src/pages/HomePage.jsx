@@ -1,12 +1,12 @@
-import React from "react";
-import AllCategoriesCarosuel from "../components/AllCategoriesCarosuel/AllCategoriesCarosuel";
-import AllProducts from "../components/AllProducts/AllProducts";
-import FooterComponents from "../components/FooterComponents/FooterComponents";
-import HeroBanner from "../components/HeroBanner/HeroBanner";
-import MainHeader from "../components/MainHeader/MainHeader";
-import NewsLetter from "../components/NewsLetter/NewsLetter";
+import React from 'react';
+import AllCategoriesCarosuel from '../components/AllCategoriesCarosuel/AllCategoriesCarosuel';
+import AllProducts from '../components/AllProducts/AllProducts';
+import FooterComponents from '../components/FooterComponents/FooterComponents';
+import HeroBanner from '../components/HeroBanner/HeroBanner';
+import MainHeader from '../components/MainHeader/MainHeader';
+import NewsLetter from '../components/NewsLetter/NewsLetter';
 
-const HomePage = () => {
+function HomePage() {
   return (
     <>
       <MainHeader />
@@ -17,6 +17,6 @@ const HomePage = () => {
       <FooterComponents />
     </>
   );
-};
+}
 
 export default HomePage;

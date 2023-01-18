@@ -8,12 +8,12 @@ import {
   Paper,
   PasswordInput,
   Text,
-  Title,
-} from "@mantine/core";
-import React from "react";
-import { Link } from "react-router-dom";
+  Title
+} from '@mantine/core';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Register = () => {
+function Register() {
   return (
     <Center className="min-h-[calc(100vh-55px)] w-full p-5 sm:p-10">
       <Paper
@@ -35,9 +35,9 @@ const Register = () => {
               placeholder="John Doe"
               variant="filled"
               classNames={{
-                input: "rounded p-2 sm:text-base placeholder-gray-400",
+                input: 'rounded p-2 sm:text-base placeholder-gray-400'
               }}
-            ></Input>
+            />
           </Box>
           <Box>
             <Text component="label" className="my-1 font-medium">
@@ -47,9 +47,9 @@ const Register = () => {
               placeholder="john@gmail.com"
               variant="filled"
               classNames={{
-                input: "rounded p-2 sm:text-base placeholder-gray-400",
+                input: 'rounded p-2 sm:text-base placeholder-gray-400'
               }}
-            ></Input>
+            />
           </Box>
           <Box>
             <Text component="label" className="font-medium">
@@ -59,7 +59,7 @@ const Register = () => {
               placeholder="********"
               variant="filled"
               classNames={{
-                input: "rounded p-2 sm:text-base placeholder-gray-400",
+                input: 'rounded p-2 sm:text-base placeholder-gray-400'
               }}
             />
           </Box>
@@ -71,15 +71,13 @@ const Register = () => {
               placeholder="********"
               variant="filled"
               classNames={{
-                input: "rounded p-2 sm:text-base placeholder-gray-400",
+                input: 'rounded p-2 sm:text-base placeholder-gray-400'
               }}
             />
           </Box>
-          <Button className="w-full rounded py-2 font-bold">
-            Create Account
-          </Button>
+          <Button className="w-full rounded py-2 font-bold">Create Account</Button>
           <Text component="p" className="text-center">
-            Already have an account?{" "}
+            Already have an account?{' '}
             <Anchor component={Link} to="/login">
               Sign In
             </Anchor>
@@ -88,6 +86,6 @@ const Register = () => {
       </Paper>
     </Center>
   );
-};
+}
 
 export default Register;

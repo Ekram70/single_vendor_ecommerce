@@ -1,17 +1,18 @@
-import { Carousel } from "@mantine/carousel";
-import { createStyles, Paper, Text, Title } from "@mantine/core";
-import { IconArrowLeft, IconArrowRight } from "@tabler/icons";
-import React from "react";
-import bannerData from "../../../data/bannerData";
+import { Carousel } from '@mantine/carousel';
+import { createStyles, Paper, Text, Title } from '@mantine/core';
+import { IconArrowLeft, IconArrowRight } from '@tabler/icons';
+import React from 'react';
+import bannerData from '../../../data/bannerData';
+
 const useStyles = createStyles((theme) => ({
   card: {
     height: 368,
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-between",
-    alignItems: "flex-start",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center'
   },
 
   title: {
@@ -20,17 +21,17 @@ const useStyles = createStyles((theme) => ({
     color: theme.dark,
     lineHeight: 1.2,
     fontSize: 32,
-    marginTop: theme.spacing.xs,
+    marginTop: theme.spacing.xs
   },
 
   category: {
     color: theme.white,
     opacity: 0.7,
     fontWeight: 700,
-    textTransform: "uppercase",
-  },
+    textTransform: 'uppercase'
+  }
 }));
-const Card = ({ image, title, category }) => {
+function Card({ image, title, category }) {
   const { classes } = useStyles();
 
   return (
@@ -52,9 +53,9 @@ const Card = ({ image, title, category }) => {
       </div>
     </Paper>
   );
-};
+}
 
-const HeroBanner = () => {
+function HeroBanner() {
   const slides = bannerData.map((item) => (
     <Carousel.Slide key={item.id}>
       <Card {...item} />
@@ -67,24 +68,22 @@ const HeroBanner = () => {
       mx="auto"
       withIndicators
       nextControlIcon={<IconArrowRight size={20} className=" text-[#E8590C]" />}
-      previousControlIcon={
-        <IconArrowLeft size={20} className=" text-[#E8590C]" />
-      }
+      previousControlIcon={<IconArrowLeft size={20} className=" text-[#E8590C]" />}
       height={400}
       styles={{
         indicator: {
           width: 14,
           height: 4,
-          transition: "width 250ms ease",
+          transition: 'width 250ms ease',
           control: {
-            backgroundColor: "#E8590C",
-          },
-        },
+            backgroundColor: '#E8590C'
+          }
+        }
       }}
     >
       {slides}
     </Carousel>
   );
-};
+}
 
 export default HeroBanner;

@@ -1,15 +1,16 @@
-import { ActionIcon, Box, Container, Group, Text, Title } from "@mantine/core";
+import { ActionIcon, Box, Container, Group, Text, Title } from '@mantine/core';
 import {
   IconBrandFacebook,
   IconBrandInstagram,
   IconBrandTwitter,
   IconBrandYoutube,
   IconCurrentLocation,
-  IconMail,
-} from "@tabler/icons";
-import React from "react";
-import Logo from "../Logo/Logo";
-const FooterComponents = () => {
+  IconMail
+} from '@tabler/icons';
+import React from 'react';
+import Logo from '../Logo/Logo';
+
+function FooterComponents() {
   return (
     <footer className="border-t  border-gray-100 bg-[#C1C2C5] pt-16 pb-12">
       <Container className=" mx-auto grid grid-cols-3">
@@ -114,6 +115,6 @@ const FooterComponents = () => {
       </Container>
     </footer>
   );
-};
+}
 
 export default FooterComponents;

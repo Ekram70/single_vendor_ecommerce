@@ -1,18 +1,13 @@
-import { Box, Card, Group, Text, Title } from "@mantine/core";
-import {
-  IconBasket,
-  IconCash,
-  IconShoppingCart,
-  IconStar,
-} from "@tabler/icons";
-import React from "react";
+import { Box, Card, Group, Text, Title } from '@mantine/core';
+import { IconBasket, IconCash, IconShoppingCart, IconStar } from '@tabler/icons';
+import React from 'react';
 
-const DashboardCard = () => {
+function DashboardCard() {
   const mockdata = [
-    { title: "Total Orders", icon: IconBasket, value: 30 },
-    { title: "Amount Spent", icon: IconCash, value: 2000 },
-    { title: "Active Order", icon: IconShoppingCart, value: 10 },
-    { title: "Reviews Given", icon: IconStar, value: 5 },
+    { title: 'Total Orders', icon: IconBasket, value: 30 },
+    { title: 'Amount Spent', icon: IconCash, value: 2000 },
+    { title: 'Active Order', icon: IconShoppingCart, value: 10 },
+    { title: 'Reviews Given', icon: IconStar, value: 5 }
   ];
 
   return (
@@ -22,9 +17,8 @@ const DashboardCard = () => {
           Dashboard
         </Title>
         <Text className="text-sm font-medium">
-          From your account dashboard. you can easily check & view your recent
-          orders, manage your shipping and billing addresses and edit your
-          password and account details.
+          From your account dashboard. you can easily check & view your recent orders, manage your
+          shipping and billing addresses and edit your password and account details.
         </Text>
       </Box>
 
@@ -53,6 +47,6 @@ const DashboardCard = () => {
       </Group>
     </Box>
   );
-};
+}
 
 export default DashboardCard;

@@ -10,12 +10,12 @@ import {
   Paper,
   PasswordInput,
   Text,
-  Title,
-} from "@mantine/core";
-import React from "react";
-import { Link } from "react-router-dom";
+  Title
+} from '@mantine/core';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Login = () => {
+function Login() {
   return (
     <Center className="min-h-[calc(100vh-55px)] w-full p-5 sm:p-10">
       <Paper
@@ -36,7 +36,7 @@ const Login = () => {
               variant="filled"
               placeholder="john@gmail.com"
               classNames={{
-                input: "rounded p-2 sm:text-base placeholder-gray-400",
+                input: 'rounded p-2 sm:text-base placeholder-gray-400'
               }}
             />
           </Box>
@@ -48,7 +48,7 @@ const Login = () => {
               variant="filled"
               placeholder="********"
               classNames={{
-                input: "rounded p-2 sm:text-base placeholder-gray-400",
+                input: 'rounded p-2 sm:text-base placeholder-gray-400'
               }}
             />
           </Box>
@@ -58,23 +58,19 @@ const Login = () => {
               label="Remember Me"
               size="xs"
               classNames={{
-                label: "pl-2 font-medium text-xs sm:text-sm",
-                body: "items-center",
+                label: 'pl-2 font-medium text-xs sm:text-sm',
+                body: 'items-center'
               }}
             />
 
-            <Text
-              component={Link}
-              to="/forget"
-              className="text-xs font-medium sm:text-sm"
-            >
+            <Text component={Link} to="/forget" className="text-xs font-medium sm:text-sm">
               Forget Password
             </Text>
           </Group>
 
           <Button className="w-full rounded py-2 font-bold">Login</Button>
           <Text component="p" className="text-center">
-            Don't have an account?{" "}
+            Don&rsquo;t have an account?{' '}
             <Anchor component={Link} to="/register">
               Sign Up
             </Anchor>
@@ -83,6 +79,6 @@ const Login = () => {
       </Paper>
     </Center>
   );
-};
+}
 
 export default Login;

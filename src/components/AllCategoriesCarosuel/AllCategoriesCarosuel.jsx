@@ -1,9 +1,9 @@
-import { Carousel } from "@mantine/carousel";
-import { Container, Text } from "@mantine/core";
-import React from "react";
-import AllCategories from "../AllCategories/AllCategories";
+import { Carousel } from '@mantine/carousel';
+import { Container, Text } from '@mantine/core';
+import React from 'react';
+import AllCategories from '../AllCategories/AllCategories';
 
-const AllCategoriesCarosuel = () => {
+function AllCategoriesCarosuel() {
   return (
     <Container className="my-5 max-w-[1175px]">
       <Text className="my-8 text-2xl" weight={900}>
@@ -16,8 +16,8 @@ const AllCategoriesCarosuel = () => {
         loop
         align="start"
         breakpoints={[
-          { maxWidth: "md", slideSize: "25%" },
-          { maxWidth: "sm", slideSize: "50%" },
+          { maxWidth: 'md', slideSize: '25%' },
+          { maxWidth: 'sm', slideSize: '50%' }
         ]}
         // slidesToScroll={8}
       >
@@ -57,6 +57,6 @@ const AllCategoriesCarosuel = () => {
       </Carousel>
     </Container>
   );
-};
+}
 
 export default AllCategoriesCarosuel;

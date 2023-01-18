@@ -1,3 +1,4 @@
 module.exports = {
-    plugins: [require('prettier-plugin-tailwindcss')],
-  }
+  // eslint-disable-next-line global-require
+  plugins: [require('prettier-plugin-tailwindcss')]
+};

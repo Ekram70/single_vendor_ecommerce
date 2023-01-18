@@ -1,16 +1,7 @@
-import {
-  Box,
-  Button,
-  Center,
-  Divider,
-  Input,
-  Paper,
-  Text,
-  Title,
-} from "@mantine/core";
-import React from "react";
+import { Box, Button, Center, Divider, Input, Paper, Text, Title } from '@mantine/core';
+import React from 'react';
 
-const ForgotPassword = () => {
+function ForgotPassword() {
   return (
     <Center className="min-h-[calc(100vh-55px)] w-full p-5 sm:p-10">
       <Paper
@@ -24,8 +15,7 @@ const ForgotPassword = () => {
         <Divider className="m-auto my-2.5 h-0.5 w-44 border-0 bg-primary" />
 
         <Title order={6} className="my-5 text-center">
-          Enter you email for verification process, we will send 4 digits code
-          to your email.
+          Enter you email for verification process, we will send 4 digits code to your email.
         </Title>
         <form className="mt-11 space-y-7">
           <Box>
@@ -36,7 +26,7 @@ const ForgotPassword = () => {
               variant="filled"
               placeholder="john@gmail.com"
               classNames={{
-                input: "rounded p-2 sm:text-base placeholder-gray-400",
+                input: 'rounded p-2 sm:text-base placeholder-gray-400'
               }}
             />
           </Box>
@@ -45,6 +35,6 @@ const ForgotPassword = () => {
       </Paper>
     </Center>
   );
-};
+}
 
 export default ForgotPassword;

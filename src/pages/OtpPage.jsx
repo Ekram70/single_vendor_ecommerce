@@ -1,14 +1,14 @@
-import React from "react";
-import MainHeader from "../components/MainHeader/MainHeader";
-import Otp from "../components/Otp/Otp";
+import React from 'react';
+import MainHeader from '../components/MainHeader/MainHeader';
+import Otp from '../components/Otp/Otp';
 
-const OtpPage = () => {
+function OtpPage() {
   return (
     <>
       <MainHeader />
       <Otp />
     </>
   );
-};
+}
 
 export default OtpPage;

@@ -1,10 +1,4 @@
-import {
-  Anchor,
-  Box,
-  Navbar,
-  Text,
-  useMantineColorScheme,
-} from "@mantine/core";
+import { Anchor, Box, Navbar, Text, useMantineColorScheme } from '@mantine/core';
 import {
   IconAdjustments,
   IconBasket,
@@ -12,26 +6,30 @@ import {
   IconHistory,
   IconLogout,
   IconSettings,
-  IconStar,
-} from "@tabler/icons";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+  IconStar
+} from '@tabler/icons';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const data = [
-  { link: "/dashboard", label: "Dashboard", icon: IconGauge },
-  { link: "/orderhistory", label: "Order History", icon: IconAdjustments },
-  { link: "", label: "My Orders", icon: IconBasket },
-  { link: "", label: "Reviews", icon: IconStar },
-  { link: "", label: "Order Tracking", icon: IconHistory },
-  { link: "", label: "Settings", icon: IconSettings },
-  { link: "", label: "Logout", icon: IconLogout },
+  { link: '/dashboard', label: 'Dashboard', icon: IconGauge },
+  { link: '/orderhistory', label: 'Order History', icon: IconAdjustments },
+  { link: '', label: 'My Orders', icon: IconBasket },
+  { link: '', label: 'Reviews', icon: IconStar },
+  { link: '', label: 'Order Tracking', icon: IconHistory },
+  { link: '', label: 'Settings', icon: IconSettings },
+  { link: '', label: 'Logout', icon: IconLogout }
 ];
 
-const SideNavbar = () => {
+function SideNavbar() {
   const { colorScheme } = useMantineColorScheme();
-  const dark = colorScheme === "dark";
+  const dark = colorScheme === 'dark';
 
-  const [active, setActive] = useState("Dashboard");
+  const [active, setActive] = useState('Dashboard');
+  const activeCss = dark ? 'bg-primary/10 text-primary/80' : 'bg-primary/40';
+  const deactiveCss = dark
+    ? 'text-white/50 hover:bg-secondary/50'
+    : 'text-secondary/70 hover:bg-secondary/5 hover:text-black/80';
 
   return (
     <Box component="aside" className="lg:basis-[18%]">
@@ -46,13 +44,7 @@ const SideNavbar = () => {
                 setActive(singleData.label);
               }}
               className={`${
-                active === singleData.label
-                  ? dark
-                    ? "bg-primary/10 text-primary/80"
-                    : "bg-primary/40"
-                  : dark
-                  ? "text-white/50 hover:bg-secondary/50"
-                  : "text-secondary/70 hover:bg-secondary/5 hover:text-black/80"
+                active === singleData.label ? activeCss : deactiveCss
               } flex items-center rounded p-2 font-medium hover:no-underline`}
             >
               <singleData.icon className="mr-3" />
@@ -62,6 +54,6 @@ const SideNavbar = () => {
       </Navbar>
     </Box>
   );
-};
+}
 
 export default SideNavbar;

@@ -1,13 +1,13 @@
-import { Container, Group } from "@mantine/core";
-import { useMediaQuery } from "@mantine/hooks";
-import React from "react";
-import DashbordHeader from "../components/DashbordHeader/DashbordHeader";
-import MainHeader from "../components/MainHeader/MainHeader";
-import SideNavbar from "../components/SideNavbar/SideNavbar";
-import UserOrderTable from "../components/UserOrderTable/UserOrderTable";
+import { Container, Group } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
+import React from 'react';
+import DashbordHeader from '../components/DashbordHeader/DashbordHeader';
+import MainHeader from '../components/MainHeader/MainHeader';
+import SideNavbar from '../components/SideNavbar/SideNavbar';
+import UserOrderTable from '../components/UserOrderTable/UserOrderTable';
 
-const UserOrderHistory = () => {
-  const matches = useMediaQuery("(min-width: 992px)");
+function UserOrderHistory() {
+  const matches = useMediaQuery('(min-width: 992px)');
 
   return (
     <>
@@ -21,6 +21,6 @@ const UserOrderHistory = () => {
       </Container>
     </>
   );
-};
+}
 
 export default UserOrderHistory;

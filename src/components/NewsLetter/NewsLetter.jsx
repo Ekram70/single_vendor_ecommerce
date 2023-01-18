@@ -1,17 +1,8 @@
-import {
-  ActionIcon,
-  Box,
-  Button,
-  Container,
-  Group,
-  Input,
-  Text,
-  Title,
-} from "@mantine/core";
-import { IconAt, IconSend } from "@tabler/icons";
-import React from "react";
+import { ActionIcon, Box, Button, Container, Group, Input, Text, Title } from '@mantine/core';
+import { IconAt, IconSend } from '@tabler/icons';
+import React from 'react';
 
-const NewsLetter = () => {
+function NewsLetter() {
   return (
     <Box className="m-auto my-8">
       <Container className="container mx-auto rounded-2xl bg-[#FFFFFF] p-4 px-5 py-8 text-gray-500 shadow-2xl ">
@@ -22,17 +13,12 @@ const NewsLetter = () => {
         >
           <IconSend size={35} className="text-[#000000]" />
         </ActionIcon>
-        <Group
-          className="my-3 mb-6 flex w-full flex-col xl:mb-0 sm:text-center"
-          position="center"
-        >
+        <Group className="my-3 mb-6 flex w-full flex-col xl:mb-0 sm:text-center" position="center">
           <Title className="mb-2 text-xl font-extrabold text-gray-900">
             Get your daily needs from our shop
           </Title>
 
-          <Text className="mb-4 text-sm">
-            Enter your email to receive exciting offers
-          </Text>
+          <Text className="mb-4 text-sm">Enter your email to receive exciting offers</Text>
         </Group>
 
         <Group className="flex w-full items-center justify-center gap-4">
@@ -44,17 +30,13 @@ const NewsLetter = () => {
             size="lg"
           />
 
-          <Button
-            size="lg"
-            variant="outline"
-            className="bg-[#FEB511] text-[#000] "
-          >
+          <Button size="lg" variant="outline" className="bg-[#FEB511] text-[#000] ">
             Subscribe
           </Button>
         </Group>
       </Container>
     </Box>
   );
-};
+}
 
 export default NewsLetter;

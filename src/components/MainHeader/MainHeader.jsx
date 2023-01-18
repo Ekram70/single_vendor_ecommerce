@@ -1,19 +1,19 @@
-import { Container, Group, Header } from "@mantine/core";
-import { useMediaQuery } from "@mantine/hooks";
-import React from "react";
-import BrowseAllCategories from "../BrowseAllCategories/BrowseAllCategories";
-import Cart from "../Cart/Cart";
-import Heart from "../Heart/Heart";
-import LoginMenu from "../LoginMenu/LoginMenu";
-import Logo from "../Logo/Logo";
-import MobileMenu from "../MobileMenu/MobileMenu";
-import SearchBar from "../SearchBar/SearchBar";
-import ThemeToggle from "../ThemeToggle/ThemeToggle";
-import UserMenu from "../UserMenu/UserMenu";
+import { Container, Group, Header } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
+import React from 'react';
+import BrowseAllCategories from '../BrowseAllCategories/BrowseAllCategories';
+import Cart from '../Cart/Cart';
+import Heart from '../Heart/Heart';
+import LoginMenu from '../LoginMenu/LoginMenu';
+import Logo from '../Logo/Logo';
+import MobileMenu from '../MobileMenu/MobileMenu';
+import SearchBar from '../SearchBar/SearchBar';
+import ThemeToggle from '../ThemeToggle/ThemeToggle';
+import UserMenu from '../UserMenu/UserMenu';
 
-const MainHeader = () => {
+function MainHeader() {
   const isLoggedIn = true;
-  const matches = useMediaQuery("(min-width: 992px)");
+  const matches = useMediaQuery('(min-width: 992px)');
 
   return (
     <Header className="shadow">
@@ -29,22 +29,20 @@ const MainHeader = () => {
           )}
 
           <Group>
-            {isLoggedIn && matches ? (
+            {matches && isLoggedIn && (
               <Group className="gap-5">
                 <Heart />
                 <Cart />
                 <UserMenu />
               </Group>
-            ) : (
-              <>{matches && <LoginMenu />}</>
             )}
-
+            {matches && !isLoggedIn && <LoginMenu />}
             <ThemeToggle />
           </Group>
         </Group>
       </Container>
     </Header>
   );
-};
+}
 
 export default MainHeader;

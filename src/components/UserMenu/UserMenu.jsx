@@ -1,17 +1,17 @@
-import { Avatar, Menu, UnstyledButton } from "@mantine/core";
+import { Avatar, Menu, UnstyledButton } from '@mantine/core';
 import {
   IconAdjustments,
   IconBasket,
   IconHistory,
   IconLogout,
   IconSettings,
-  IconStar,
-} from "@tabler/icons";
-import React from "react";
+  IconStar
+} from '@tabler/icons';
+import React from 'react';
 
-import profilePic from "../../assets/images/profile.png";
+import profilePic from '../../assets/images/profile.png';
 
-const UserMenu = () => {
+function UserMenu() {
   return (
     <Menu>
       <Menu.Target>
@@ -29,6 +29,6 @@ const UserMenu = () => {
       </Menu.Dropdown>
     </Menu>
   );
-};
+}
 
 export default UserMenu;

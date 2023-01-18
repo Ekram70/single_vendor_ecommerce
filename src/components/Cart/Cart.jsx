@@ -8,15 +8,15 @@ import {
   Menu,
   Stack,
   Text,
-  useMantineColorScheme,
-} from "@mantine/core";
-import { IconShoppingCart } from "@tabler/icons";
-import React from "react";
-import productPic from "../../assets/images/product.png";
+  useMantineColorScheme
+} from '@mantine/core';
+import { IconShoppingCart } from '@tabler/icons';
+import React from 'react';
+import productPic from '../../assets/images/product.png';
 
-const Cart = () => {
+function Cart() {
   const { colorScheme } = useMantineColorScheme();
-  const dark = colorScheme === "dark";
+  const dark = colorScheme === 'dark';
 
   return (
     <Menu>
@@ -26,14 +26,12 @@ const Cart = () => {
           inline
           size={18}
           classNames={{
-            indicator: "text-secondary",
+            indicator: 'text-secondary'
           }}
         >
           <ActionIcon>
             <IconShoppingCart
-              className={`h-6 w-6 ${
-                dark ? "stroke-primary" : "stroke-secondary"
-              }`}
+              className={`h-6 w-6 ${dark ? 'stroke-primary' : 'stroke-secondary'}`}
             />
           </ActionIcon>
         </Indicator>
@@ -79,6 +77,6 @@ const Cart = () => {
       </Menu.Dropdown>
     </Menu>
   );
-};
+}
 
 export default Cart;

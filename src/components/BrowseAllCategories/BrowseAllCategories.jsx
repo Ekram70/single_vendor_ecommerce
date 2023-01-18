@@ -1,14 +1,14 @@
-import { Box, Button, ChevronIcon, HoverCard, Stack } from "@mantine/core";
-import React from "react";
-import categories from "../../../data/categories";
+import { Box, Button, ChevronIcon, HoverCard, Stack } from '@mantine/core';
+import React from 'react';
+import categories from '../../../data/categories';
 
-const BrowseAllCategories = () => {
+function BrowseAllCategories() {
   return (
     <Box>
       <HoverCard
         withArrow
         classNames={{
-          dropdown: "!min-w-[200px] p-0",
+          dropdown: '!min-w-[200px] p-0'
         }}
       >
         <HoverCard.Target>
@@ -24,7 +24,7 @@ const BrowseAllCategories = () => {
                   key={idx}
                   position="right-start"
                   classNames={{
-                    dropdown: "p-0",
+                    dropdown: 'p-0'
                   }}
                 >
                   <HoverCard.Target>
@@ -32,7 +32,7 @@ const BrowseAllCategories = () => {
                       variant="default"
                       className="border-none px-3 font-normal"
                       classNames={{
-                        inner: "justify-start",
+                        inner: 'justify-start'
                       }}
                     >
                       {category.label}
@@ -41,12 +41,12 @@ const BrowseAllCategories = () => {
                   <HoverCard.Dropdown>
                     <Stack className="gap-0">
                       {category.subCategories &&
-                        category.subCategories.map((subCategory, idx) => (
+                        category.subCategories.map((subCategory, idx1) => (
                           <HoverCard
-                            key={idx}
+                            key={idx1}
                             position="right-start"
                             classNames={{
-                              dropdown: "p-0",
+                              dropdown: 'p-0'
                             }}
                           >
                             <HoverCard.Target>
@@ -54,7 +54,7 @@ const BrowseAllCategories = () => {
                                 variant="default"
                                 className="border-none px-3 font-normal"
                                 classNames={{
-                                  inner: "justify-start",
+                                  inner: 'justify-start'
                                 }}
                               >
                                 {subCategory.label}
@@ -63,29 +63,27 @@ const BrowseAllCategories = () => {
                             <HoverCard.Dropdown>
                               <Stack className="gap-0">
                                 {subCategory.subSubCategories &&
-                                  subCategory.subSubCategories.map(
-                                    (subSubCategory, idx) => (
-                                      <HoverCard
-                                        key={idx}
-                                        position="right"
-                                        classNames={{
-                                          dropdown: "p-0",
-                                        }}
-                                      >
-                                        <HoverCard.Target>
-                                          <Button
-                                            variant="default"
-                                            className="border-none px-3 font-normal"
-                                            classNames={{
-                                              inner: "justify-start",
-                                            }}
-                                          >
-                                            {subSubCategory}
-                                          </Button>
-                                        </HoverCard.Target>
-                                      </HoverCard>
-                                    )
-                                  )}
+                                  subCategory.subSubCategories.map((subSubCategory, idx2) => (
+                                    <HoverCard
+                                      key={idx2}
+                                      position="right"
+                                      classNames={{
+                                        dropdown: 'p-0'
+                                      }}
+                                    >
+                                      <HoverCard.Target>
+                                        <Button
+                                          variant="default"
+                                          className="border-none px-3 font-normal"
+                                          classNames={{
+                                            inner: 'justify-start'
+                                          }}
+                                        >
+                                          {subSubCategory}
+                                        </Button>
+                                      </HoverCard.Target>
+                                    </HoverCard>
+                                  ))}
                               </Stack>
                             </HoverCard.Dropdown>
                           </HoverCard>
@@ -99,6 +97,6 @@ const BrowseAllCategories = () => {
       </HoverCard>
     </Box>
   );
-};
+}
 
 export default BrowseAllCategories;

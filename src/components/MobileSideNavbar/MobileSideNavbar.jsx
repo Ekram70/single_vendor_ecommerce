@@ -1,4 +1,4 @@
-import { ActionIcon, Menu } from "@mantine/core";
+import { ActionIcon, Menu } from '@mantine/core';
 import {
   IconAdjustments,
   IconBasket,
@@ -6,11 +6,11 @@ import {
   IconHistory,
   IconLogout,
   IconSettings,
-  IconStar,
-} from "@tabler/icons";
-import React from "react";
+  IconStar
+} from '@tabler/icons';
+import React from 'react';
 
-const MobileSideNavbar = () => {
+function MobileSideNavbar() {
   return (
     <Menu>
       <Menu.Target>
@@ -28,6 +28,6 @@ const MobileSideNavbar = () => {
       </Menu.Dropdown>
     </Menu>
   );
-};
+}
 
 export default MobileSideNavbar;

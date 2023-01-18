@@ -1,14 +1,14 @@
-import React from "react";
-import ForgotPassword from "../components/ForgotPassword/ForgotPassword";
-import MainHeader from "../components/MainHeader/MainHeader";
+import React from 'react';
+import ForgotPassword from '../components/ForgotPassword/ForgotPassword';
+import MainHeader from '../components/MainHeader/MainHeader';
 
-const ForgotPasswordPage = () => {
+function ForgotPasswordPage() {
   return (
     <>
       <MainHeader />
       <ForgotPassword />
     </>
   );
-};
+}
 
 export default ForgotPasswordPage;

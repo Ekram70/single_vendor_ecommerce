@@ -1,32 +1,21 @@
-import {
-  Burger,
-  Drawer,
-  Group,
-  Space,
-  useMantineColorScheme,
-} from "@mantine/core";
-import React, { useState } from "react";
-import Cart from "../Cart/Cart";
-import Heart from "../Heart/Heart";
-import LoginMenu from "../LoginMenu/LoginMenu";
-import NavlinkCategories from "../NavlinkCategories/NavlinkCategories";
-import SearchBar from "../SearchBar/SearchBar";
-import UserMenu from "../UserMenu/UserMenu";
+import { Burger, Drawer, Group, Space, useMantineColorScheme } from '@mantine/core';
+import React, { useState } from 'react';
+import Cart from '../Cart/Cart';
+import Heart from '../Heart/Heart';
+import LoginMenu from '../LoginMenu/LoginMenu';
+import NavlinkCategories from '../NavlinkCategories/NavlinkCategories';
+import SearchBar from '../SearchBar/SearchBar';
+import UserMenu from '../UserMenu/UserMenu';
 
-const MobileMenu = () => {
+function MobileMenu() {
   const { colorScheme } = useMantineColorScheme();
-  const dark = colorScheme === "dark";
+  const dark = colorScheme === 'dark';
   const [opened, setOpened] = useState(false);
   const isLoggedIn = true;
 
   return (
     <Group>
-      <Drawer
-        opened={opened}
-        onClose={() => setOpened(false)}
-        padding="xl"
-        size={300}
-      >
+      <Drawer opened={opened} onClose={() => setOpened(false)} padding="xl" size={300}>
         {!isLoggedIn && <LoginMenu />}
         {isLoggedIn && (
           <Group position="apart">
@@ -43,11 +32,11 @@ const MobileMenu = () => {
       <Burger
         size="sm"
         opened={opened}
-        color={`${dark ? "#F2B33B" : "#2D2D2D"}`}
+        color={`${dark ? '#F2B33B' : '#2D2D2D'}`}
         onClick={() => setOpened(true)}
       />
     </Group>
   );
-};
+}
 
 export default MobileMenu;

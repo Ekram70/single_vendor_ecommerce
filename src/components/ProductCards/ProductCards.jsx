@@ -1,7 +1,7 @@
-import { Box, Button, Group, Image, Text } from "@mantine/core";
-import { IconShoppingCart } from "@tabler/icons";
+import { Box, Button, Group, Image, Text } from '@mantine/core';
+import { IconShoppingCart } from '@tabler/icons';
 
-const ProductCards = ({ product }) => {
+function ProductCards({ product }) {
   // console.log(product);
   const { catPrice, image, price, category, title } = product;
   return (
@@ -25,12 +25,8 @@ const ProductCards = ({ product }) => {
         </Group>
         <Group className="my-4" position="apart" spacing="md" grow>
           <Box className="flex items-center justify-evenly space-x-2">
-            <span className="text-2xl font-semibold text-gray-900 dark:text-white">
-              ${price}
-            </span>
-            <span className="text-sm text-gray-600 line-through dark:text-white">
-              ${catPrice}
-            </span>
+            <span className="text-2xl font-semibold text-gray-900 dark:text-white">${price}</span>
+            <span className="text-sm text-gray-600 line-through dark:text-white">${catPrice}</span>
           </Box>
 
           <Button
@@ -43,6 +39,6 @@ const ProductCards = ({ product }) => {
       </Box>
     </Box>
   );
-};
+}
 
 export default ProductCards;

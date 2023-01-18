@@ -1,15 +1,13 @@
-import { BackgroundImage, useMantineColorScheme } from "@mantine/core";
-import React from "react";
-import bgImage from "../../assets/images/pattern.jpg";
-import MainHeader from "../MainHeader/MainHeader";
+import { BackgroundImage } from '@mantine/core';
+import React from 'react';
+import bgImage from '../../assets/images/pattern.jpg';
+import MainHeader from '../MainHeader/MainHeader';
 
-const Error = () => {
-  const { colorScheme } = useMantineColorScheme();
-  const dark = colorScheme === "dark";
+function Error() {
   return (
     <BackgroundImage
       src={bgImage}
-      className={` bg-left-top bg-repeat bg-blend-multiply 2xl:bg-auto`}
+      className={` 2xl:bg-auto bg-left-top bg-repeat bg-blend-multiply`}
     >
       <MainHeader />
 
@@ -28,12 +26,15 @@ const Error = () => {
                 alt=""
               />
               <h1 className="px-4 pt-8 pb-4 text-center text-5xl font-bold leading-10 text-gray-800">
-                OOPS!{" "}
+                OOPS!{' '}
               </h1>
               <p className="px-4 pb-10 text-center text-base leading-none text-gray-600">
-                No signal here! we cannot find the page you are looking for{" "}
+                No signal here! we cannot find the page you are looking for{' '}
               </p>
-              <button className="mx-4 h-10 w-44 rounded-md border bg-indigo-700 text-base text-white hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-800 focus:ring-opacity-50">
+              <button
+                type="button"
+                className="mx-4 h-10 w-44 rounded-md border bg-indigo-700 text-base text-white hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-800 focus:ring-opacity-50"
+              >
                 Go Back
               </button>
             </div>
@@ -42,6 +43,6 @@ const Error = () => {
       </div>
     </BackgroundImage>
   );
-};
+}
 
 export default Error;

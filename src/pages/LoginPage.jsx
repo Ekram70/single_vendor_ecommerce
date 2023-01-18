@@ -1,14 +1,14 @@
-import React from "react";
-import Login from "../components/Login/Login";
-import MainHeader from "../components/MainHeader/MainHeader";
+import React from 'react';
+import Login from '../components/Login/Login';
+import MainHeader from '../components/MainHeader/MainHeader';
 
-const LoginPage = () => {
+function LoginPage() {
   return (
     <>
       <MainHeader />
       <Login />
     </>
   );
-};
+}
 
 export default LoginPage;

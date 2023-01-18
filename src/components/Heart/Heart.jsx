@@ -1,10 +1,10 @@
-import { ActionIcon, Indicator, useMantineColorScheme } from "@mantine/core";
-import { IconHeart } from "@tabler/icons";
-import React from "react";
+import { ActionIcon, Indicator, useMantineColorScheme } from '@mantine/core';
+import { IconHeart } from '@tabler/icons';
+import React from 'react';
 
-const Heart = () => {
+function Heart() {
   const { colorScheme } = useMantineColorScheme();
-  const dark = colorScheme === "dark";
+  const dark = colorScheme === 'dark';
 
   return (
     <Indicator
@@ -12,16 +12,14 @@ const Heart = () => {
       inline
       size={18}
       classNames={{
-        indicator: "text-secondary",
+        indicator: 'text-secondary'
       }}
     >
       <ActionIcon>
-        <IconHeart
-          className={`h-6 w-6 ${dark ? "stroke-primary" : "stroke-secondary"}`}
-        />
+        <IconHeart className={`h-6 w-6 ${dark ? 'stroke-primary' : 'stroke-secondary'}`} />
       </ActionIcon>
     </Indicator>
   );
-};
+}
 
 export default Heart;

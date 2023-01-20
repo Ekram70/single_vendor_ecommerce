@@ -6,17 +6,15 @@ import HeroBanner from '../components/HeroBanner/HeroBanner';
 import MainHeader from '../components/MainHeader/MainHeader';
 import NewsLetter from '../components/NewsLetter/NewsLetter';
 
-function HomePage() {
-  return (
-    <>
-      <MainHeader />
-      <AllCategoriesCarosuel />
-      <HeroBanner />
-      <AllProducts />
-      <NewsLetter />
-      <FooterComponents />
-    </>
-  );
-}
+const HomePage = () => (
+  <>
+    <MainHeader />
+    <AllCategoriesCarosuel />
+    <HeroBanner />
+    <AllProducts />
+    <NewsLetter />
+    <FooterComponents />
+  </>
+);
 
 export default HomePage;

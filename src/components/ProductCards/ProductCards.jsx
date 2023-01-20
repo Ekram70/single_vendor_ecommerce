@@ -1,7 +1,7 @@
 import { Box, Button, Group, Image, Text } from '@mantine/core';
 import { IconShoppingCart } from '@tabler/icons';
 
-function ProductCards({ product }) {
+const ProductCards = ({ product }) => {
   // console.log(product);
   const { catPrice, image, price, category, title } = product;
   return (
@@ -39,6 +39,6 @@ function ProductCards({ product }) {
       </Box>
     </Box>
   );
-}
+};
 
 export default ProductCards;

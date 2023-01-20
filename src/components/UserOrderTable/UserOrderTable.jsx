@@ -47,7 +47,7 @@ const data = [
   }
 ];
 
-function UserOrderTable() {
+const UserOrderTable = () => {
   const rows = data.map((item) => (
     <tr key={item.id}>
       <td>{item.id}</td>
@@ -115,6 +115,6 @@ function UserOrderTable() {
       </ScrollArea>
     </Box>
   );
-}
+};
 
 export default UserOrderTable;

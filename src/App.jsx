@@ -7,12 +7,13 @@ import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import OtpPage from './pages/OtpPage';
+import ProductsCategories from './pages/ProductsCategories';
 import RegisterPage from './pages/RegisterPage';
 import ResetPasswordPage from './pages/ResetPasswordPage';
 import UserDashBoard from './pages/UserDashBoard';
 import UserOrderHistory from './pages/UserOrderHistory';
 
-function App() {
+const App = () => {
   const [colorScheme, setColorScheme] = useLocalStorage({
     key: 'mantine-color-scheme',
     defaultValue: 'light'
@@ -39,12 +40,13 @@ function App() {
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/dashboard" element={<UserDashBoard />} />
             <Route path="/orderhistory" element={<UserOrderHistory />} />
+            <Route path="/categories" element={<ProductsCategories />} />
             <Route path="*" element={<Error />} />
           </Routes>
         </BrowserRouter>
       </MantineProvider>
     </ColorSchemeProvider>
   );
-}
+};
 
 export default App;

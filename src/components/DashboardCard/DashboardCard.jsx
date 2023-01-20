@@ -2,7 +2,7 @@ import { Box, Card, Group, Text, Title } from '@mantine/core';
 import { IconBasket, IconCash, IconShoppingCart, IconStar } from '@tabler/icons';
 import React from 'react';
 
-function DashboardCard() {
+const DashboardCard = () => {
   const mockdata = [
     { title: 'Total Orders', icon: IconBasket, value: 30 },
     { title: 'Amount Spent', icon: IconCash, value: 2000 },
@@ -47,6 +47,6 @@ function DashboardCard() {
       </Group>
     </Box>
   );
-}
+};
 
 export default DashboardCard;

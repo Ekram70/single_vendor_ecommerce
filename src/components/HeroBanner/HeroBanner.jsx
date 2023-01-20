@@ -31,7 +31,7 @@ const useStyles = createStyles((theme) => ({
     textTransform: 'uppercase'
   }
 }));
-function Card({ image, title, category }) {
+const Card = ({ image, title, category }) => {
   const { classes } = useStyles();
 
   return (
@@ -53,9 +53,9 @@ function Card({ image, title, category }) {
       </div>
     </Paper>
   );
-}
+};
 
-function HeroBanner() {
+const HeroBanner = () => {
   const slides = bannerData.map((item) => (
     <Carousel.Slide key={item.id}>
       <Card {...item} />
@@ -84,6 +84,6 @@ function HeroBanner() {
       {slides}
     </Carousel>
   );
-}
+};
 
 export default HeroBanner;

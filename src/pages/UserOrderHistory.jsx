@@ -6,7 +6,7 @@ import MainHeader from '../components/MainHeader/MainHeader';
 import SideNavbar from '../components/SideNavbar/SideNavbar';
 import UserOrderTable from '../components/UserOrderTable/UserOrderTable';
 
-function UserOrderHistory() {
+const UserOrderHistory = () => {
   const matches = useMediaQuery('(min-width: 992px)');
 
   return (
@@ -21,6 +21,6 @@ function UserOrderHistory() {
       </Container>
     </>
   );
-}
+};
 
 export default UserOrderHistory;

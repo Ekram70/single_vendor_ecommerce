@@ -6,7 +6,7 @@ import DashbordHeader from '../components/DashbordHeader/DashbordHeader';
 import MainHeader from '../components/MainHeader/MainHeader';
 import SideNavbar from '../components/SideNavbar/SideNavbar';
 
-function UserDashBoard() {
+const UserDashBoard = () => {
   const matches = useMediaQuery('(min-width: 992px)');
 
   return (
@@ -21,6 +21,6 @@ function UserDashBoard() {
       </Container>
     </>
   );
-}
+};
 
 export default UserDashBoard;

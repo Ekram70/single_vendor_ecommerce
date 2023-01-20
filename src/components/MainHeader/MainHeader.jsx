@@ -11,7 +11,7 @@ import SearchBar from '../SearchBar/SearchBar';
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import UserMenu from '../UserMenu/UserMenu';
 
-function MainHeader() {
+const MainHeader = () => {
   const isLoggedIn = true;
   const matches = useMediaQuery('(min-width: 992px)');
 
@@ -43,6 +43,6 @@ function MainHeader() {
       </Container>
     </Header>
   );
-}
+};
 
 export default MainHeader;

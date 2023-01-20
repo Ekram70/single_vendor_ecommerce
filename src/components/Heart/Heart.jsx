@@ -2,7 +2,7 @@ import { ActionIcon, Indicator, useMantineColorScheme } from '@mantine/core';
 import { IconHeart } from '@tabler/icons';
 import React from 'react';
 
-function Heart() {
+const Heart = () => {
   const { colorScheme } = useMantineColorScheme();
   const dark = colorScheme === 'dark';
 
@@ -20,6 +20,6 @@ function Heart() {
       </ActionIcon>
     </Indicator>
   );
-}
+};
 
 export default Heart;

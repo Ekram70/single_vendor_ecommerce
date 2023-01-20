@@ -2,13 +2,11 @@ import React from 'react';
 import MainHeader from '../components/MainHeader/MainHeader';
 import Register from '../components/Register/Register';
 
-function RegisterPage() {
-  return (
-    <>
-      <MainHeader />
-      <Register />
-    </>
-  );
-}
+const RegisterPage = () => (
+  <>
+    <MainHeader />
+    <Register />
+  </>
+);
 
 export default RegisterPage;

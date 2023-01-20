@@ -7,7 +7,7 @@ import NavlinkCategories from '../NavlinkCategories/NavlinkCategories';
 import SearchBar from '../SearchBar/SearchBar';
 import UserMenu from '../UserMenu/UserMenu';
 
-function MobileMenu() {
+const MobileMenu = () => {
   const { colorScheme } = useMantineColorScheme();
   const dark = colorScheme === 'dark';
   const [opened, setOpened] = useState(false);
@@ -37,6 +37,6 @@ function MobileMenu() {
       />
     </Group>
   );
-}
+};
 
 export default MobileMenu;

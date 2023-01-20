@@ -4,7 +4,7 @@ import React from 'react';
 import profilePic from '../../assets/images/profile.png';
 import MobileSideNavbar from '../MobileSideNavbar/MobileSideNavbar';
 
-function DashbordHeader() {
+const DashbordHeader = () => {
   const { colorScheme } = useMantineColorScheme();
   const dark = colorScheme === 'dark';
   const matches = useMediaQuery('(min-width: 992px)');
@@ -28,6 +28,6 @@ function DashbordHeader() {
       </Container>
     </Box>
   );
-}
+};
 
 export default DashbordHeader;

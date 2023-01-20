@@ -3,7 +3,7 @@ import { Button, Center, Divider, Paper, Title, useMantineColorScheme } from '@m
 import React, { useState } from 'react';
 import OtpInput from 'react-otp-input';
 
-function Otp() {
+const Otp = () => {
   const [otp, setOtp] = useState('');
   const { colorScheme } = useMantineColorScheme();
   const dark = colorScheme === 'dark';
@@ -39,6 +39,6 @@ function Otp() {
       </Paper>
     </Center>
   );
-}
+};
 
 export default Otp;

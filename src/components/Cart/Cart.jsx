@@ -14,7 +14,7 @@ import { IconShoppingCart } from '@tabler/icons';
 import React from 'react';
 import productPic from '../../assets/images/product.png';
 
-function Cart() {
+const Cart = () => {
   const { colorScheme } = useMantineColorScheme();
   const dark = colorScheme === 'dark';
 
@@ -77,6 +77,6 @@ function Cart() {
       </Menu.Dropdown>
     </Menu>
   );
-}
+};
 
 export default Cart;

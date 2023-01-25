@@ -3,6 +3,7 @@ import { useLocalStorage } from '@mantine/hooks';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import mantineThemeObj from '../config/mantineThemeObj';
 import Error from './components/Error/Error';
+import Layout from './components/Layout/Layout';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
@@ -32,16 +33,18 @@ const App = () => {
       >
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/reset" element={<ResetPasswordPage />} />
-            <Route path="/forgot" element={<ForgotPasswordPage />} />
-            <Route path="/otp" element={<OtpPage />} />
-            <Route path="/register" element={<RegisterPage />} />
-            <Route path="/dashboard" element={<UserDashBoard />} />
-            <Route path="/orderhistory" element={<UserOrderHistory />} />
-            <Route path="/categories" element={<ProductsCategories />} />
-            <Route path="*" element={<Error />} />
+            <Route path="/" element={<Layout />}>
+              <Route index element={<HomePage />} />
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/reset" element={<ResetPasswordPage />} />
+              <Route path="/forgot" element={<ForgotPasswordPage />} />
+              <Route path="/otp" element={<OtpPage />} />
+              <Route path="/register" element={<RegisterPage />} />
+              <Route path="/dashboard" element={<UserDashBoard />} />
+              <Route path="/orderhistory" element={<UserOrderHistory />} />
+              <Route path="/categories" element={<ProductsCategories />} />
+              <Route path="*" element={<Error />} />
+            </Route>
           </Routes>
         </BrowserRouter>
       </MantineProvider>

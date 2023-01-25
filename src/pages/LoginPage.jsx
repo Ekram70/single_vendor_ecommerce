@@ -1,12 +1,6 @@
 import React from 'react';
 import Login from '../components/Login/Login';
-import MainHeader from '../components/MainHeader/MainHeader';
 
-const LoginPage = () => (
-  <>
-    <MainHeader />
-    <Login />
-  </>
-);
+const LoginPage = () => <Login />;
 
 export default LoginPage;

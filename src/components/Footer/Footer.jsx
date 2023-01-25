@@ -10,7 +10,7 @@ import {
 import React from 'react';
 import Logo from '../Logo/Logo';
 
-const FooterComponents = () => (
+const Footer = () => (
   <footer className="border-t  border-gray-100 bg-[#C1C2C5] pt-16 pb-12">
     <Container className=" mx-auto grid grid-cols-3">
       <Box className="col-span-1 space-y-5">
@@ -115,4 +115,4 @@ const FooterComponents = () => (
   </footer>
 );
 
-export default FooterComponents;
+export default Footer;

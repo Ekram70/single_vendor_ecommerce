@@ -12,11 +12,12 @@ import {
   useMantineColorScheme
 } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
-import React from 'react';
+import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import z from 'zod';
 import axios from '../../api/axios';
+import AuthContext from '../../context/AuthProvider';
 
 const schema = z
   .object({
@@ -53,6 +54,8 @@ const Register = () => {
   const { colorScheme } = useMantineColorScheme();
   const dark = colorScheme === 'dark';
 
+  const { setAuth } = useContext(AuthContext);
+
   const form = useForm({
     validate: zodResolver(schema),
     initialValues: {
@@ -82,6 +85,7 @@ const Register = () => {
           color: `${dark ? '#FFF' : '#2D2D2D'}`
         }
       });
+      setAuth({ token: response.data.accessToken });
       form.reset();
     } catch (err) {
       if (!err?.response) {

@@ -1,6 +1,7 @@
 import { Container, Group, Header } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import React from 'react';
+import useAuth from '../../hooks/useAuth';
 import BrowseAllCategories from '../BrowseAllCategories/BrowseAllCategories';
 import Cart from '../Cart/Cart';
 import Heart from '../Heart/Heart';
@@ -12,7 +13,8 @@ import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import UserMenu from '../UserMenu/UserMenu';
 
 const MainHeader = () => {
-  const isLoggedIn = true;
+  const { auth } = useAuth();
+  const isLoggedIn = !!auth?.accessToken;
   const matches = useMediaQuery('(min-width: 992px)');
 
   return (

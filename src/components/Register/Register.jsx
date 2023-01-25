@@ -85,7 +85,8 @@ const Register = () => {
           color: `${dark ? '#FFF' : '#2D2D2D'}`
         }
       });
-      setAuth({ token: response.data.accessToken });
+      const { accessToken, roles } = response.data;
+      setAuth({ accessToken, roles });
       form.reset();
     } catch (err) {
       if (!err?.response) {

@@ -14,12 +14,12 @@ import {
   useMantineColorScheme
 } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
-import React, { useContext } from 'react';
+import React from 'react';
 import toast from 'react-hot-toast';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import z from 'zod';
 import axios from '../../api/axios';
-import AuthContext from '../../context/AuthProvider';
+import useAuth from '../../hooks/useAuth';
 
 const schema = z.object({
   email: z.string().email({ message: 'Invalid email' }),
@@ -30,7 +30,10 @@ const Login = () => {
   const { colorScheme } = useMantineColorScheme();
   const dark = colorScheme === 'dark';
 
-  const { setAuth } = useContext(AuthContext);
+  const { setAuth } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/';
 
   const form = useForm({
     validate: zodResolver(schema),
@@ -52,8 +55,10 @@ const Login = () => {
           color: `${dark ? '#FFF' : '#2D2D2D'}`
         }
       });
-      setAuth({ token: response.data.accessToken });
+      const { accessToken, roles } = response.data;
+      setAuth({ accessToken, roles });
       form.reset();
+      navigate(from, { replace: true });
     } catch (err) {
       if (!err?.response) {
         toast.error('No server response.', {

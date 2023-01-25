@@ -6,8 +6,8 @@ import NewsLetter from '../components/NewsLetter/NewsLetter';
 
 const HomePage = () => (
   <>
-    <AllCategoriesCarosuel />
     <HeroBanner />
+    <AllCategoriesCarosuel />
     <AllProducts />
     <NewsLetter />
   </>

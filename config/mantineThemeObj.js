@@ -29,6 +29,7 @@ const mantineThemeObj = {
     deg: 45
   },
   fontFamily: 'Noto Sans, sans-serif',
+  headings: { fontFamily: 'Noto Sans, sans-serif' },
   loader: 'dots',
   primaryColor: 'brand'
 };

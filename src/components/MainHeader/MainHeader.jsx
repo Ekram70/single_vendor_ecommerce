@@ -18,11 +18,11 @@ const MainHeader = () => {
   const matches = useMediaQuery('(min-width: 992px)');
 
   return (
-    <Header className="shadow">
+    <Header>
       <Container className="w-full max-w-[700px] py-2 lg:max-w-[1200px]">
         <Group position="apart" className="gap-10">
           {!matches && <MobileMenu />}
-          <Logo />
+          <Logo width={48} />
           {matches && (
             <>
               <BrowseAllCategories />

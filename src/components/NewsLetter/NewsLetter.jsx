@@ -4,7 +4,7 @@ import React from 'react';
 
 const NewsLetter = () => (
   <Box className="m-auto my-8">
-    <Container className="container mx-auto rounded-2xl bg-[#FFFFFF] p-4 px-5 py-8 text-gray-500 shadow-2xl ">
+    <Container className="container mx-auto rounded-2xl border border-solid border-gray-300 bg-[#FFFFFF] p-4 px-5 py-8 text-gray-500">
       <ActionIcon
         variant="filled"
         component="a"

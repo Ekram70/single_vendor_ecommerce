@@ -1,7 +1,7 @@
 import React from 'react';
 import { Toaster } from 'react-hot-toast';
 import { Outlet } from 'react-router-dom';
-// import Footer from '../Footer/Footer';
+import MainFooter from '../MainFooter/MainFooter';
 import MainHeader from '../MainHeader/MainHeader';
 
 const Layout = () => (
@@ -9,7 +9,7 @@ const Layout = () => (
     <Toaster />
     <MainHeader />
     <Outlet />
-    {/* <Footer /> */}
+    <MainFooter />
   </>
 );
 

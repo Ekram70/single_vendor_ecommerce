@@ -1,7 +1,16 @@
+import product8 from '../src/assets/images/product-1-1.jpg';
+import product1 from '../src/assets/images/product-16-1.jpg';
+import product2 from '../src/assets/images/product-16-2.jpg';
+import product3 from '../src/assets/images/product-16-3.jpg';
+import product4 from '../src/assets/images/product-16-4.jpg';
+import product5 from '../src/assets/images/product-16-5.jpg';
+import product6 from '../src/assets/images/product-16-6.jpg';
+import product7 from '../src/assets/images/product-16-7.jpg';
+
 const productsData = [
   {
     id: 1,
-    image: '../src/assets/images/product-16-1.jpg',
+    image: product1,
     price: 15,
     catPrice: 10,
     category: 'Snack',
@@ -9,7 +18,7 @@ const productsData = [
   },
   {
     id: 2,
-    image: '../src/assets/images/product-16-2.jpg',
+    image: product2,
     price: 15,
     catPrice: 10,
     category: 'Snack',
@@ -17,7 +26,7 @@ const productsData = [
   },
   {
     id: 3,
-    image: '../src/assets/images/product-16-3.jpg',
+    image: product3,
     price: 15,
     catPrice: 10,
     category: 'Snack',
@@ -25,7 +34,7 @@ const productsData = [
   },
   {
     id: 4,
-    image: '../src/assets/images/product-16-4.jpg',
+    image: product4,
     price: 15,
     catPrice: 10,
     category: 'Hodo Foods',
@@ -33,7 +42,7 @@ const productsData = [
   },
   {
     id: 5,
-    image: '../src/assets/images/product-16-5.jpg',
+    image: product5,
     price: 15,
     catPrice: 10,
     category: 'Snack',
@@ -41,7 +50,7 @@ const productsData = [
   },
   {
     id: 6,
-    image: '../src/assets/images/product-16-6.jpg',
+    image: product6,
     price: 15,
     catPrice: 10,
     category: 'Snack',
@@ -49,7 +58,7 @@ const productsData = [
   },
   {
     id: 7,
-    image: '../src/assets/images/product-16-7.jpg',
+    image: product7,
     price: 15,
     catPrice: 10,
     category: 'Vegitables',
@@ -57,7 +66,7 @@ const productsData = [
   },
   {
     id: 8,
-    image: '../src/assets/images/product-1-1.jpg',
+    image: product8,
     price: 23,
     catPrice: 25,
     category: 'Pet Foods',

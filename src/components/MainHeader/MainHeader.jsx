@@ -20,7 +20,7 @@ const MainHeader = () => {
   return (
     <Header>
       <Container className="w-full max-w-[700px] py-2 lg:max-w-[1200px]">
-        <Group position="apart" className="gap-10">
+        <Group position="apart" className="gap-10 py-3">
           {!matches && <MobileMenu />}
           <Logo width={48} />
           {matches && (

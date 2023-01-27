@@ -3,6 +3,7 @@ import { useLocalStorage } from '@mantine/hooks';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import mantineThemeObj from '../config/mantineThemeObj';
 import Error from './components/Error/Error';
+import HeroBanner from './components/HeroBanner/HeroBanner';
 import Layout from './components/Layout/Layout';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
@@ -50,11 +51,14 @@ const App = () => {
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/categories" element={<ProductsCategories />} />
 
-              {/* Protected Routes */}
+              {/* Private Routes */}
               <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>
                 <Route path="/dashboard" element={<UserDashBoard />} />
                 <Route path="/orderhistory" element={<UserOrderHistory />} />
               </Route>
+
+              {/* component testing in isolation */}
+              <Route path="/test" element={<HeroBanner />} />
 
               {/* Not Found route */}
               <Route path="*" element={<Error />} />

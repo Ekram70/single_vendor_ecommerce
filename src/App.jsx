@@ -2,8 +2,8 @@ import { ColorSchemeProvider, MantineProvider } from '@mantine/core';
 import { useLocalStorage } from '@mantine/hooks';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import mantineThemeObj from '../config/mantineThemeObj';
+import AllCategoriesCarosuel from './components/AllCategoriesCarosuel/AllCategoriesCarosuel';
 import Error from './components/Error/Error';
-import HeroBanner from './components/HeroBanner/HeroBanner';
 import Layout from './components/Layout/Layout';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
@@ -58,7 +58,7 @@ const App = () => {
               </Route>
 
               {/* component testing in isolation */}
-              <Route path="/test" element={<HeroBanner />} />
+              <Route path="/test" element={<AllCategoriesCarosuel />} />
 
               {/* Not Found route */}
               <Route path="*" element={<Error />} />

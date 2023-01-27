@@ -1,60 +1,59 @@
 import { Carousel } from '@mantine/carousel';
-import { Container, Text } from '@mantine/core';
+import { Box, Container, Text } from '@mantine/core';
+import { IconArrowLeft, IconArrowRight } from '@tabler/icons';
 import React from 'react';
-import AllCategories from '../AllCategories/AllCategories';
+import CategoriesCard from '../CategoriesCard/CategoriesCard';
 
-const AllCategoriesCarosuel = () => (
-  <Container className="my-5 max-w-[1175px]">
-    <Text className="my-8 text-2xl" weight={900}>
-      All Categories
-    </Text>
-    <Carousel
-      height={250}
-      slideSize="20"
-      slideGap="md"
-      loop
-      align="start"
-      breakpoints={[
-        { maxWidth: 'md', slideSize: '25%' },
-        { maxWidth: 'sm', slideSize: '50%' }
-      ]}
-      // slidesToScroll={8}
-    >
-      <Carousel.Slide>
-        <AllCategories />
-      </Carousel.Slide>
-      <Carousel.Slide>
-        <AllCategories />
-      </Carousel.Slide>
-      <Carousel.Slide>
-        <AllCategories />
-      </Carousel.Slide>
-      <Carousel.Slide>
-        <AllCategories />
-      </Carousel.Slide>
-      <Carousel.Slide>
-        <AllCategories />
-      </Carousel.Slide>
-      <Carousel.Slide>
-        <AllCategories />
-      </Carousel.Slide>
-      <Carousel.Slide>
-        <AllCategories />
-      </Carousel.Slide>
-      <Carousel.Slide>
-        <AllCategories />
-      </Carousel.Slide>
-      <Carousel.Slide>
-        <AllCategories />
-      </Carousel.Slide>
-      <Carousel.Slide>
-        <AllCategories />
-      </Carousel.Slide>
-      <Carousel.Slide>
-        <AllCategories />
-      </Carousel.Slide>
-    </Carousel>
-  </Container>
+const CategoriesCardCarosuel = () => (
+  <Box component="section">
+    <Container className="my-10 w-full max-w-[700px] py-2 lg:max-w-[1200px]">
+      <Text className="mb-8 text-2xl font-bold">All Categories</Text>
+      <Carousel
+        loop
+        align="start"
+        slideGap="md"
+        slideSize={130}
+        controlsOffset="xl"
+        controlSize={35}
+        nextControlIcon={<IconArrowRight className="text-primary" />}
+        previousControlIcon={<IconArrowLeft className="text-primary" />}
+      >
+        <Carousel.Slide>
+          <CategoriesCard />
+        </Carousel.Slide>
+        <Carousel.Slide>
+          <CategoriesCard />
+        </Carousel.Slide>
+        <Carousel.Slide>
+          <CategoriesCard />
+        </Carousel.Slide>
+        <Carousel.Slide>
+          <CategoriesCard />
+        </Carousel.Slide>
+        <Carousel.Slide>
+          <CategoriesCard />
+        </Carousel.Slide>
+        <Carousel.Slide>
+          <CategoriesCard />
+        </Carousel.Slide>
+        <Carousel.Slide>
+          <CategoriesCard />
+        </Carousel.Slide>
+        <Carousel.Slide>
+          <CategoriesCard />
+        </Carousel.Slide>
+        <Carousel.Slide>
+          <CategoriesCard />
+        </Carousel.Slide>
+        <Carousel.Slide>
+          <CategoriesCard />
+        </Carousel.Slide>
+        <Carousel.Slide>
+          <CategoriesCard />
+        </Carousel.Slide>
+      </Carousel>
+    </Container>
+  </Box>
 );
 
-export default AllCategoriesCarosuel;
+export default CategoriesCardCarosuel;

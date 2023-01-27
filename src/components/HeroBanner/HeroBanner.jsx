@@ -13,7 +13,7 @@ const HeroBanner = () => {
   ));
 
   return (
-    <Box>
+    <Box component="section">
       <Carousel
         loop
         align="start"
@@ -23,7 +23,7 @@ const HeroBanner = () => {
         controlSize={35}
         nextControlIcon={<IconArrowRight className="text-primary" />}
         previousControlIcon={<IconArrowLeft className="text-primary" />}
-        className="mx-auto w-full max-w-[700px] py-10 px-4 lg:max-w-[1200px]"
+        className="mx-auto my-10 w-full max-w-[700px] px-4 lg:max-w-[1200px]"
       >
         {slides}
       </Carousel>

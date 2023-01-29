@@ -1,6 +1,6 @@
 import { Box, Container, Grid } from '@mantine/core';
 import React from 'react';
-import AllProducts from '../components/AllProducts/AllProducts';
+import ExploreProducts from '../components/ExploreProducts/ExploreProducts';
 import ProductAvailability from '../components/ProductAvailability/ProductAvailability';
 import ProductPagination from '../components/ProductPagination/ProductPagination';
 import ProductSorting from '../components/ProductSorting/ProductSorting';
@@ -18,7 +18,7 @@ const ProductsCategories = () => (
           <ProductSubCategories />
         </Grid.Col>
         <Grid.Col xs={9.5} className="">
-          <AllProducts />
+          <ExploreProducts />
           <ProductPagination />
         </Grid.Col>
       </Grid>

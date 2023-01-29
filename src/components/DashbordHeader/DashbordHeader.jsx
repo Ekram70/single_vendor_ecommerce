@@ -7,7 +7,7 @@ import MobileSideNavbar from '../MobileSideNavbar/MobileSideNavbar';
 const DashbordHeader = () => {
   const { colorScheme } = useMantineColorScheme();
   const dark = colorScheme === 'dark';
-  const matches = useMediaQuery('(min-width: 992px)');
+  const isMobile = useMediaQuery('(min-width: 992px)');
   return (
     <Box component="section">
       <Container
@@ -23,7 +23,7 @@ const DashbordHeader = () => {
               <Text className="text-xl font-bold md:text-2xl">Dashonte Clark</Text>
             </Stack>
           </Group>
-          {!matches && <MobileSideNavbar />}
+          {!isMobile && <MobileSideNavbar />}
         </Group>
       </Container>
     </Box>

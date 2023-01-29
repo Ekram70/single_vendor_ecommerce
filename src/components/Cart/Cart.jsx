@@ -12,7 +12,7 @@ import {
 } from '@mantine/core';
 import { IconShoppingCart } from '@tabler/icons';
 import React from 'react';
-import productPic from '../../assets/images/product.png';
+import productPic from '../../assets/images/product1.png';
 
 const Cart = () => {
   const { colorScheme } = useMantineColorScheme();

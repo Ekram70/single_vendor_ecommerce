@@ -108,6 +108,11 @@ const MainFooter = () => (
         </Box>
       </Flex>
     </Container>
+    <Box className="flex h-12 items-center justify-center bg-primary text-center text-secondary">
+      <Text component="span" className="text-xs font-bold">
+        &copy; 2023 Shoppers.com
+      </Text>
+    </Box>
   </Footer>
 );
 

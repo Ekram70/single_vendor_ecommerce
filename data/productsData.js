@@ -1,11 +1,11 @@
-import product8 from '../src/assets/images/product-1-1.jpg';
-import product1 from '../src/assets/images/product-16-1.jpg';
-import product2 from '../src/assets/images/product-16-2.jpg';
-import product3 from '../src/assets/images/product-16-3.jpg';
-import product4 from '../src/assets/images/product-16-4.jpg';
-import product5 from '../src/assets/images/product-16-5.jpg';
-import product6 from '../src/assets/images/product-16-6.jpg';
-import product7 from '../src/assets/images/product-16-7.jpg';
+import product1 from '../src/assets/images/product1.png';
+import product2 from '../src/assets/images/product2.png';
+import product3 from '../src/assets/images/product3.png';
+import product4 from '../src/assets/images/product4.png';
+import product5 from '../src/assets/images/product5.png';
+import product6 from '../src/assets/images/product6.png';
+import product7 from '../src/assets/images/product7.png';
+import product8 from '../src/assets/images/product8.png';
 
 const productsData = [
   {
@@ -67,10 +67,10 @@ const productsData = [
   {
     id: 8,
     image: product8,
-    price: 23,
-    catPrice: 25,
-    category: 'Pet Foods',
-    title: 'Blue Diamond Almonds Lightly Salted Vegetables'
+    price: 15,
+    catPrice: 10,
+    category: 'Snack',
+    title: 'All Natural Italian-Style Chicken Meatballs'
   }
 ];
 export default productsData;

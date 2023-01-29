@@ -15,15 +15,15 @@ import UserMenu from '../UserMenu/UserMenu';
 const MainHeader = () => {
   const { auth } = useAuth();
   const isLoggedIn = !!auth?.accessToken;
-  const matches = useMediaQuery('(min-width: 992px)');
+  const isMobile = useMediaQuery('(min-width: 992px)');
 
   return (
     <Header>
       <Container className="w-full max-w-[700px] py-2 lg:max-w-[1200px]">
         <Group position="apart" className="gap-10 py-3">
-          {!matches && <MobileMenu />}
+          {!isMobile && <MobileMenu />}
           <Logo width={48} />
-          {matches && (
+          {isMobile && (
             <>
               <BrowseAllCategories />
               <SearchBar />
@@ -31,14 +31,14 @@ const MainHeader = () => {
           )}
 
           <Group>
-            {matches && isLoggedIn && (
+            {isMobile && isLoggedIn && (
               <Group className="gap-5">
                 <Heart />
                 <Cart />
                 <UserMenu />
               </Group>
             )}
-            {matches && !isLoggedIn && <LoginMenu />}
+            {isMobile && !isLoggedIn && <LoginMenu />}
             <ThemeToggle />
           </Group>
         </Group>

@@ -6,14 +6,14 @@ import SideNavbar from '../components/SideNavbar/SideNavbar';
 import UserOrderTable from '../components/UserOrderTable/UserOrderTable';
 
 const UserOrderHistory = () => {
-  const matches = useMediaQuery('(min-width: 992px)');
+  const isMobile = useMediaQuery('(min-width: 992px)');
 
   return (
     <>
       <DashbordHeader />
       <Container className="max-w-[700px] lg:max-w-[1200px]">
         <Group className="items-start" position="apart">
-          {matches && <SideNavbar />}
+          {isMobile && <SideNavbar />}
           <UserOrderTable />
         </Group>
       </Container>

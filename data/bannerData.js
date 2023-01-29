@@ -1,11 +1,11 @@
-import slider1 from '../src/assets/images/slider-1.png';
-import slider2 from '../src/assets/images/slider-2.png';
+import slider1 from '../src/assets/images/slider1.png';
+import slider2 from '../src/assets/images/slider2.png';
 
 const bannerData = [
   {
     id: 1,
     image: slider1,
-    title: "Dont't miss amazing grocery deals",
+    title: "Don't miss amazing grocery deals",
     subtitle: 'Save up to 50% off on your first order'
   },
   {

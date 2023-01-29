@@ -5,7 +5,7 @@ import mantineThemeObj from '../config/mantineThemeObj';
 import AllCategoriesCarosuel from './components/AllCategoriesCarosuel/AllCategoriesCarosuel';
 import Error from './components/Error/Error';
 import Layout from './components/Layout/Layout';
-import RequireAuth from './components/RequireAuth/RequireAuth';
+// import RequireAuth from './components/RequireAuth/RequireAuth';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
@@ -16,11 +16,11 @@ import ResetPasswordPage from './pages/ResetPasswordPage';
 import UserDashBoard from './pages/UserDashBoard';
 import UserOrderHistory from './pages/UserOrderHistory';
 
-const ROLES = {
+/* const ROLES = {
   Admin: 4759,
   Editor: 1567,
   User: 5698
-};
+}; */
 
 const App = () => {
   const [colorScheme, setColorScheme] = useLocalStorage({
@@ -52,10 +52,10 @@ const App = () => {
               <Route path="/categories" element={<ProductsCategories />} />
 
               {/* Private Routes */}
-              <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>
-                <Route path="/dashboard" element={<UserDashBoard />} />
-                <Route path="/orderhistory" element={<UserOrderHistory />} />
-              </Route>
+              {/* <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}> */}
+              <Route path="/dashboard" element={<UserDashBoard />} />
+              <Route path="/orderhistory" element={<UserOrderHistory />} />
+              {/* </Route> */}
 
               {/* component testing in isolation */}
               <Route path="/test" element={<AllCategoriesCarosuel />} />

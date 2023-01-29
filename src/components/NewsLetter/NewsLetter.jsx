@@ -1,38 +1,39 @@
-import { ActionIcon, Box, Button, Container, Group, Input, Text, Title } from '@mantine/core';
+import {
+  ActionIcon,
+  Box,
+  Button,
+  Container,
+  Group,
+  Input,
+  Paper,
+  Stack,
+  Text,
+  Title
+} from '@mantine/core';
 import { IconAt, IconSend } from '@tabler/icons';
 import React from 'react';
 
 const NewsLetter = () => (
-  <Box className="m-auto my-8">
-    <Container className="container mx-auto rounded-2xl border border-solid border-gray-300 bg-[#FFFFFF] p-4 px-5 py-8 text-gray-500">
-      <ActionIcon
-        variant="filled"
-        component="a"
-        className="m-auto mb-8 h-[50px] w-[50px] rounded-2xl bg-[#FEB511]"
-      >
-        <IconSend size={35} className="text-[#000000]" />
-      </ActionIcon>
-      <Group className="my-3 mb-6 flex w-full flex-col xl:mb-0 sm:text-center" position="center">
-        <Title className="mb-2 text-xl font-extrabold text-gray-900">
-          Get your daily needs from our shop
-        </Title>
-
-        <Text className="mb-4 text-sm">Enter your email to receive exciting offers</Text>
-      </Group>
-
-      <Group className="flex w-full items-center justify-center gap-4">
-        <Input
-          icon={<IconAt />}
-          variant="filled"
-          placeholder="Enter Your Email Here"
-          radius="md"
-          size="lg"
-        />
-
-        <Button size="lg" variant="outline" className="bg-[#FEB511] text-[#000] ">
-          Subscribe
-        </Button>
-      </Group>
+  <Box className="m-auto my-20">
+    <Container className="w-full max-w-[700px] py-2 lg:max-w-[1200px]">
+      <Paper radius="xs" withBorder className="m-auto w-fit p-10 text-center">
+        <Stack align="center" className="gap-0">
+          <ActionIcon variant="filled" className="mb-5 h-[50px] w-[50px] rounded-full bg-primary">
+            <IconSend size={30} className="text-secondary" />
+          </ActionIcon>
+          <Title className="text-2xl font-bold">Get your daily needs from our shop</Title>
+          <Text className="text-sm">Enter your email to receive exciting offers</Text>
+          <Group position="center" className="mt-5">
+            <Input
+              icon={<IconAt size={20} />}
+              variant="filled"
+              placeholder="Enter Your Email Here"
+              className="max-w-[300px]"
+            />
+            <Button variant="outline">Subscribe</Button>
+          </Group>
+        </Stack>
+      </Paper>
     </Container>
   </Box>
 );

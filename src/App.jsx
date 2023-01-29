@@ -3,6 +3,7 @@ import { useLocalStorage } from '@mantine/hooks';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import mantineThemeObj from '../config/mantineThemeObj';
 import AllCategoriesCarosuel from './components/AllCategoriesCarosuel/AllCategoriesCarosuel';
+import DashboardLayout from './components/DashboardLayout/DashboardLayout';
 import Error from './components/Error/Error';
 import Layout from './components/Layout/Layout';
 // import RequireAuth from './components/RequireAuth/RequireAuth';
@@ -53,8 +54,10 @@ const App = () => {
 
               {/* Private Routes */}
               {/* <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}> */}
-              <Route path="/dashboard" element={<UserDashBoard />} />
-              <Route path="/orderhistory" element={<UserOrderHistory />} />
+              <Route element={<DashboardLayout />}>
+                <Route path="/dashboard" element={<UserDashBoard />} />
+                <Route path="/orderhistory" element={<UserOrderHistory />} />
+              </Route>
               {/* </Route> */}
 
               {/* component testing in isolation */}

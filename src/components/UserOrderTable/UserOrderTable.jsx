@@ -12,6 +12,7 @@ import {
 import { DateRangePicker } from '@mantine/dates';
 import { IconCalendar, IconSettings } from '@tabler/icons';
 import React from 'react';
+import Product1 from '../../assets/images/product1.png';
 
 const data = [
   {
@@ -59,10 +60,10 @@ const UserOrderTable = () => {
           classNames={{
             image: 'rounded-full'
           }}
-          src="http://merchant.kistimath.com/storage/app/public/ShPQw5JeHh6etOMcBRffC6AKStYRV6WUtspOZn1i.jpeg"
+          src={Product1}
           alt="Juice image"
         />
-        <Text component="h6" lineClamp={10} className="m-0 ml-4 font-semibold">
+        <Text component="h6" lineClamp={2} className="m-0 ml-4 font-semibold">
           {item.name}
         </Text>
       </td>
@@ -87,19 +88,19 @@ const UserOrderTable = () => {
       </Box>
 
       <Group position="apart">
-        <Box className="space-x-5">
+        <Group className="gap-y-0">
           <Anchor>All Orders</Anchor>
           <Anchor>Pending</Anchor>
           <Anchor>Completed</Anchor>
           <Anchor>Cancelled</Anchor>
-        </Box>
+        </Group>
         <Group>
           <DateRangePicker placeholder="Filter By Date" icon={<IconCalendar />} />
         </Group>
       </Group>
 
-      <ScrollArea>
-        <Table withBorder striped highlightOnHover className="my-4 min-w-[650px]">
+      <ScrollArea className="my-4 max-w-[calc(100vw-3rem)] sm:w-auto">
+        <Table withBorder striped highlightOnHover className="min-w-[500px]">
           <thead>
             <tr>
               <th>Id</th>

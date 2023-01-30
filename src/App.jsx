@@ -14,6 +14,7 @@ import OtpPage from './pages/OtpPage';
 import ProductsCategories from './pages/ProductsCategories';
 import RegisterPage from './pages/RegisterPage';
 import ResetPasswordPage from './pages/ResetPasswordPage';
+import SingleProductPage from './pages/SingleProductPage';
 import UserDashBoard from './pages/UserDashBoard';
 import UserOrderHistory from './pages/UserOrderHistory';
 
@@ -51,6 +52,7 @@ const App = () => {
               <Route path="/otp" element={<OtpPage />} />
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/categories" element={<ProductsCategories />} />
+              <Route path="/singleproduct" element={<SingleProductPage />} />
 
               {/* Private Routes */}
               {/* <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}> */}

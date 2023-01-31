@@ -1,29 +1,53 @@
-import { Box, Container, Grid } from '@mantine/core';
-import React from 'react';
-import ExploreProducts from '../components/ExploreProducts/ExploreProducts';
+import { Box, Button, Container, Group, Modal, Stack } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
+import React, { useState } from 'react';
 import ProductAvailability from '../components/ProductAvailability/ProductAvailability';
 import ProductPagination from '../components/ProductPagination/ProductPagination';
+import ProductsGrid from '../components/ProductsGrid/ProductsGrid';
 import ProductSorting from '../components/ProductSorting/ProductSorting';
 import ProductsPriceRange from '../components/ProductsPriceRange/ProductsPriceRange';
 import ProductSubCategories from '../components/ProductSubCategories/ProductSubCategories';
 
-const ProductsCategories = () => (
-  <Box>
-    <Container className=" my-8 max-w-[1300px]">
-      <Grid gutter="md">
-        <Grid.Col xs={2.5}>
-          <ProductSorting />
-          <ProductAvailability />
-          <ProductsPriceRange />
-          <ProductSubCategories />
-        </Grid.Col>
-        <Grid.Col xs={9.5} className="">
-          <ExploreProducts />
-          <ProductPagination />
-        </Grid.Col>
-      </Grid>
-    </Container>
-  </Box>
-);
+const ProductsCategories = () => {
+  const isMobile = useMediaQuery('(min-width: 992px)');
+  const [opened, setOpened] = useState(false);
+
+  return (
+    <Box>
+      <Container className="w-full max-w-[700px] py-2 lg:max-w-[1200px]">
+        <Group
+          className={`my-20 ${!isMobile && 'flex-col'} flex-nowrap items-start justify-between`}
+        >
+          {isMobile ? (
+            <Stack className="basis-[250px] space-y-10">
+              <ProductSorting />
+              <ProductAvailability />
+              <ProductsPriceRange />
+              <ProductSubCategories />
+            </Stack>
+          ) : (
+            <>
+              <Modal centered size="auto" opened={opened} onClose={() => setOpened(false)}>
+                <ProductSorting />
+                <ProductAvailability />
+                <ProductsPriceRange />
+                <ProductSubCategories />
+              </Modal>
+
+              <Group position="center" className="w-full">
+                <Button onClick={() => setOpened(true)}>Filter & Sort</Button>
+              </Group>
+            </>
+          )}
+
+          <Stack className="basis-[900px]">
+            <ProductsGrid />
+            <ProductPagination />
+          </Stack>
+        </Group>
+      </Container>
+    </Box>
+  );
+};
 
 export default ProductsCategories;

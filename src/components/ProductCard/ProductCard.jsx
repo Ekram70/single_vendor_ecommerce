@@ -4,13 +4,13 @@ import { IconShoppingCart } from '@tabler/icons';
 const ProductCards = ({ product }) => {
   const { catPrice, image, price, category, title } = product;
   return (
-    <Card className="min-w-[270px] basis-1/5 rounded-md p-5 shadow-md" withBorder>
+    <Card className="max-w-[280px] rounded-md p-5 shadow-md" withBorder>
       <Group position="right">
         <Badge color="red">New</Badge>
       </Group>
 
       <Card.Section>
-        <Image src={image} />
+        <Image src={image} width={250} className="mx-auto" />
       </Card.Section>
 
       <Stack>

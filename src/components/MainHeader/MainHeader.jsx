@@ -18,7 +18,7 @@ const MainHeader = () => {
   const isMobile = useMediaQuery('(min-width: 992px)');
 
   return (
-    <Header className="sticky">
+    <Header className={isMobile && 'sticky'}>
       <Container className="w-full max-w-[700px] py-2 lg:max-w-[1200px]">
         <Group position="apart" className="gap-10 py-3">
           {!isMobile && <MobileMenu />}

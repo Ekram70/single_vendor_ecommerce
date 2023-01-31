@@ -2,7 +2,7 @@ import { Anchor, Box, Checkbox, Container, Divider, Group, Text } from '@mantine
 import React from 'react';
 
 const ProductSorting = () => (
-  <Container className=" my-4 rounded-lg px-7 py-8 shadow-lg outline  outline-2 outline-offset-2 outline-[#C1C2C5] hover:outline-2 hover:outline-offset-2 hover:outline-green-400">
+  <Container className="rounded-lg px-7 py-8 shadow-lg outline  outline-2 outline-offset-2 outline-[#C1C2C5] hover:outline-2 hover:outline-offset-2 hover:outline-green-400">
     <Box className=" ">
       <Group position="apart" className="mb-4">
         <Text className="font-semibold">Sort</Text>

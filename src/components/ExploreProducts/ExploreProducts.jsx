@@ -1,8 +1,7 @@
-import { Box, Container, Flex, Group, Text } from '@mantine/core';
+import { Box, Container, Group, Text } from '@mantine/core';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import productsData from '../../../data/productsData';
-import ProductCard from '../ProductCard/ProductCard';
+import ProductsGrid from '../ProductsGrid/ProductsGrid';
 
 const ExploreProducts = () => (
   <Box component="section">
@@ -20,10 +19,7 @@ const ExploreProducts = () => (
         </Group>
       </Group>
 
-      <Flex gap="xl" justify="center" align="flex-start" direction="row" wrap="wrap">
-        {productsData &&
-          productsData.map((product) => <ProductCard product={product} key={product.id} />)}
-      </Flex>
+      <ProductsGrid />
     </Container>
   </Box>
 );

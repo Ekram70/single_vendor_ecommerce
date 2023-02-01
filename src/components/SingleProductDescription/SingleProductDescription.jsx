@@ -1,8 +1,8 @@
 import { Box, Container, Tabs } from '@mantine/core';
-import CustomerReviews from '../CustomerReviews/CustomerReviews';
 import ProductDescription from '../ProductDescription/ProductDescription';
 import ProductInformations from '../ProductInformations/ProductInformations';
 import ProductQuestion from '../ProductQuestion/ProductQuestion';
+import SingleProductReviews from '../SingleProductReviews/SingleProductReviews';
 
 const SingleProductDescription = () => (
   <Container className="my-4 rounded-md border-2 border-solid border-[#C1C2C5]">
@@ -56,7 +56,7 @@ const SingleProductDescription = () => (
         </Tabs.Panel>
 
         <Tabs.Panel value="Reviews" pt="xs">
-          <CustomerReviews />
+          <SingleProductReviews />
         </Tabs.Panel>
         <Tabs.Panel value="Question" pt="xs">
           <ProductQuestion />

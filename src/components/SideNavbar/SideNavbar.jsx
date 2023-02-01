@@ -1,27 +1,28 @@
 import { Anchor, Box, Navbar, Text, useMantineColorScheme } from '@mantine/core';
 import {
-  IconAdjustments,
   IconBasket,
   IconGauge,
+  IconHeart,
   IconHistory,
   IconLogout,
   IconSettings,
-  IconStar
+  IconStar,
+  IconUser
 } from '@tabler/icons';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const data = [
   { link: '/dashboard', label: 'Dashboard', icon: IconGauge },
-  { link: '/orderhistory', label: 'Order History', icon: IconAdjustments },
-  { link: '', label: 'My Orders', icon: IconBasket },
-  { link: '', label: 'Reviews', icon: IconStar },
-  { link: '', label: 'Order Tracking', icon: IconHistory },
-  { link: '', label: 'Settings', icon: IconSettings },
+  { link: '/orderhistory', label: 'My Orders', icon: IconBasket },
+  { link: '/wishlist', label: 'Wish List', icon: IconHeart },
+  { link: '/userreviews', label: 'Reviews', icon: IconStar },
+  { link: '/ordertracking', label: 'Order Tracking', icon: IconHistory },
+  { link: '/accountsettings', label: 'Account Settings', icon: IconSettings },
+  { link: '/useraccountdetails', label: 'My Account', icon: IconUser },
   { link: '', label: 'Logout', icon: IconLogout }
 ];
-
-function SideNavbar() {
+const SideNavbar = () => {
   const { colorScheme } = useMantineColorScheme();
   const dark = colorScheme === 'dark';
 
@@ -54,6 +55,6 @@ function SideNavbar() {
       </Navbar>
     </Box>
   );
-}
+};
 
 export default SideNavbar;

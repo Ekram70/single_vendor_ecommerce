@@ -1,19 +1,20 @@
+/* eslint-disable prettier/prettier */
 import {
-  Box,
-  Button,
-  Container,
-  Grid,
-  Group,
-  Paper,
-  Rating,
-  Slider,
-  Textarea,
-  Title
+    Box,
+    Button,
+    Container,
+    Grid,
+    Group,
+    Paper,
+    Rating,
+    Slider,
+    Textarea,
+    Title
 } from '@mantine/core';
 import React from 'react';
 import CustomarReviewsCard from '../CustomarReviewsCard/CustomarReviewsCard';
 
-const CustomerReviews = () => (
+const SingleProductReviews = () => (
   <Container className="mb-5 mt-2">
     <Title order={4} className="mb-4 text-clip">
       Customar Reviews
@@ -124,4 +125,4 @@ const CustomerReviews = () => (
   </Container>
 );
 
-export default CustomerReviews;
+export default SingleProductReviews;

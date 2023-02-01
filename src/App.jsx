@@ -10,13 +10,18 @@ import Layout from './components/Layout/Layout';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
+import OrderTrackingPage from './pages/OrderTrackingPage';
 import OtpPage from './pages/OtpPage';
 import ProductsCategories from './pages/ProductsCategories';
 import RegisterPage from './pages/RegisterPage';
 import ResetPasswordPage from './pages/ResetPasswordPage';
 import SingleProductPage from './pages/SingleProductPage';
+import UserAccountDetails from './pages/UserAccountDetails';
+import UserAccountSettings from './pages/UserAccountSettings';
 import UserDashBoard from './pages/UserDashBoard';
 import UserOrderHistory from './pages/UserOrderHistory';
+import UserReviewsPage from './pages/UserReviewsPage';
+import WishListPage from './pages/WishListPage';
 
 /* const ROLES = {
   Admin: 4759,
@@ -59,6 +64,11 @@ const App = () => {
               <Route element={<DashboardLayout />}>
                 <Route path="/dashboard" element={<UserDashBoard />} />
                 <Route path="/orderhistory" element={<UserOrderHistory />} />
+                <Route path="/useraccountdetails" element={<UserAccountDetails />} />
+                <Route path="/accountsettings" element={<UserAccountSettings />} />
+                <Route path="/ordertracking" element={<OrderTrackingPage />} />
+                <Route path="/userreviews" element={<UserReviewsPage />} />
+                <Route path="/wishlist" element={<WishListPage />} />
               </Route>
               {/* </Route> */}
 
@@ -74,5 +84,4 @@ const App = () => {
     </ColorSchemeProvider>
   );
 };
-
 export default App;

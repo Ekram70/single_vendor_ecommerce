@@ -1,4 +1,13 @@
-import { Anchor, Box, Group, Header, Paper, Rating, Text, Title } from '@mantine/core';
+import {
+  Anchor,
+  Box,
+  Group,
+  Header,
+  Paper,
+  Rating,
+  Text,
+  Title
+} from '@mantine/core';
 import { IconEdit, IconTrash } from '@tabler/icons';
 import React from 'react';
 
@@ -12,7 +21,8 @@ const UserReviews = () => (
         <Group position="apart" className="mt-3 px-4">
           <Group>
             <Title order={5}>
-              Product Name: <span className="text-sm font-medium">Brand New Body Spray</span>
+              Product Name:{' '}
+              <span className="text-sm font-medium">Brand New Body Spray</span>
             </Title>
           </Group>
           <Group position="apart">
@@ -37,9 +47,10 @@ const UserReviews = () => (
         </Group>
         <Group>
           <Text className="text-justify">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa excepturi perspiciatis
-            incidunt iusto nesciunt similique libero totam porro veniam ipsum iure, possimus ad sunt
-            quam laborum quasi animi, aut laudantium placeat.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+            excepturi perspiciatis incidunt iusto nesciunt similique libero
+            totam porro veniam ipsum iure, possimus ad sunt quam laborum quasi
+            animi, aut laudantium placeat.
           </Text>
         </Group>
       </Paper>
@@ -76,9 +87,10 @@ const UserReviews = () => (
         </Group>
         <Group>
           <Text className="text-justify">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa excepturi perspiciatis
-            incidunt iusto nesciunt similique libero totam porro veniam ipsum iure, possimus ad sunt
-            quam laborum quasi animi, aut laudantium placeat.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+            excepturi perspiciatis incidunt iusto nesciunt similique libero
+            totam porro veniam ipsum iure, possimus ad sunt quam laborum quasi
+            animi, aut laudantium placeat.
           </Text>
         </Group>
       </Paper>
@@ -91,7 +103,8 @@ const UserReviews = () => (
         <Group position="apart" className="mt-3 px-4">
           <Group>
             <Title order={5}>
-              Product Name: <span className="text-sm font-medium">Brand New Body Spray</span>
+              Product Name:{' '}
+              <span className="text-sm font-medium">Brand New Body Spray</span>
             </Title>
           </Group>
           <Group position="apart">
@@ -116,9 +129,10 @@ const UserReviews = () => (
         </Group>
         <Group>
           <Text className="text-justify">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa excepturi perspiciatis
-            incidunt iusto nesciunt similique libero totam porro veniam ipsum iure, possimus ad sunt
-            quam laborum quasi animi, aut laudantium placeat.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+            excepturi perspiciatis incidunt iusto nesciunt similique libero
+            totam porro veniam ipsum iure, possimus ad sunt quam laborum quasi
+            animi, aut laudantium placeat.
           </Text>
         </Group>
       </Paper>

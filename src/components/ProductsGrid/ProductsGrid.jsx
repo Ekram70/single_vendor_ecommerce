@@ -6,7 +6,9 @@ import ProductCard from '../ProductCard/ProductCard';
 const ProductsGrid = () => (
   <Group position="center">
     {productsData &&
-      productsData.map((product) => <ProductCard product={product} key={product.id} />)}
+      productsData.map((product) => (
+        <ProductCard product={product} key={product.id} />
+      ))}
   </Group>
 );
 

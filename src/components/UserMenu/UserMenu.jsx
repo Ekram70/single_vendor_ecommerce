@@ -20,7 +20,11 @@ const UserMenu = () => (
       </UnstyledButton>
     </Menu.Target>
     <Menu.Dropdown>
-      <Menu.Item component={Link} to="/dashboard" icon={<IconAdjustments size={14} />}>
+      <Menu.Item
+        component={Link}
+        to="/dashboard"
+        icon={<IconAdjustments size={14} />}
+      >
         Dashboard
       </Menu.Item>
       <Menu.Item component={Link} icon={<IconBasket size={14} />}>

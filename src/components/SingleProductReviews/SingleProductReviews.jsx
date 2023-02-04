@@ -1,15 +1,14 @@
-/* eslint-disable prettier/prettier */
 import {
-    Box,
-    Button,
-    Container,
-    Grid,
-    Group,
-    Paper,
-    Rating,
-    Slider,
-    Textarea,
-    Title
+  Box,
+  Button,
+  Container,
+  Grid,
+  Group,
+  Paper,
+  Rating,
+  Slider,
+  Textarea,
+  Title
 } from '@mantine/core';
 import React from 'react';
 import CustomarReviewsCard from '../CustomarReviewsCard/CustomarReviewsCard';

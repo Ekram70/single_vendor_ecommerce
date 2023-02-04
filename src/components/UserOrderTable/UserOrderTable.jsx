@@ -95,7 +95,10 @@ const UserOrderTable = () => {
           <Anchor>Cancelled</Anchor>
         </Group>
         <Group>
-          <DateRangePicker placeholder="Filter By Date" icon={<IconCalendar />} />
+          <DateRangePicker
+            placeholder="Filter By Date"
+            icon={<IconCalendar />}
+          />
         </Group>
       </Group>
 

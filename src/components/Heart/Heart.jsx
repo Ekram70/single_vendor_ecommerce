@@ -16,7 +16,9 @@ const Heart = () => {
       }}
     >
       <ActionIcon>
-        <IconHeart className={`h-6 w-6 ${dark ? 'stroke-primary' : 'stroke-secondary'}`} />
+        <IconHeart
+          className={`h-6 w-6 ${dark ? 'stroke-primary' : 'stroke-secondary'}`}
+        />
       </ActionIcon>
     </Indicator>
   );

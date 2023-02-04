@@ -1,4 +1,13 @@
-import { Box, Button, Center, Divider, Input, Paper, Text, Title } from '@mantine/core';
+import {
+  Box,
+  Button,
+  Center,
+  Divider,
+  Input,
+  Paper,
+  Text,
+  Title
+} from '@mantine/core';
 import React from 'react';
 
 const ForgotPassword = () => (
@@ -14,7 +23,8 @@ const ForgotPassword = () => (
       <Divider className="m-auto my-2.5 h-0.5 w-44 border-0 bg-primary" />
 
       <Title order={6} className="my-5 text-center">
-        Enter you email for verification process, we will send 4 digits code to your email.
+        Enter you email for verification process, we will send 4 digits code to
+        your email.
       </Title>
       <form className="mt-11 space-y-7">
         <Box>

@@ -60,7 +60,12 @@ const UserAccountInformation = () => (
             4299 Express LaneSarasota, <br /> FL 34249 USA, Sarasota
           </Text>
           <Group position="" className="my-8">
-            <Button variant="outline" color="orange" radius="md" className="px-10 py-3 font-bold">
+            <Button
+              variant="outline"
+              color="orange"
+              radius="md"
+              className="px-10 py-3 font-bold"
+            >
               Edit
             </Button>
           </Group>

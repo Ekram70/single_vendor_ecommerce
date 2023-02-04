@@ -1,4 +1,14 @@
-import { Avatar, Badge, Box, Checkbox, Group, Paper, Rating, Stack, Text } from '@mantine/core';
+import {
+  Avatar,
+  Badge,
+  Box,
+  Checkbox,
+  Group,
+  Paper,
+  Rating,
+  Stack,
+  Text
+} from '@mantine/core';
 import { IconTrash } from '@tabler/icons';
 import React from 'react';
 import product1 from '../../assets/images/product4.png';
@@ -8,7 +18,11 @@ const WishList = () => (
     <Box component="div">
       <Group position="apart" className="rounded-md bg-yellow-400 px-6 py-4">
         <Group>
-          <Checkbox color="orange" size="xs" classNames={{ label: 'font-bold text-md' }} />
+          <Checkbox
+            color="orange"
+            size="xs"
+            classNames={{ label: 'font-bold text-md' }}
+          />
           <Text className="text-sm font-semibold">Product</Text>
         </Group>
         <Group position="apart" className=" lg:space-x-8">
@@ -29,7 +43,9 @@ const WishList = () => (
               <Checkbox size="xs" />
               <Avatar size="lg" src={product1} />
               <Stack>
-                <Text className="text-sm font-normal">Field Roast Chao Cheese Creamy Original</Text>
+                <Text className="text-sm font-normal">
+                  Field Roast Chao Cheese Creamy Original
+                </Text>
                 <Box className="flex items-center">
                   <Rating defaultValue={4.5} size="sm" />
                   <span className="ml-1 text-sm">4.95 out of 5</span>
@@ -65,7 +81,9 @@ const WishList = () => (
               <Checkbox size="xs" />
               <Avatar size="lg" src={product1} />
               <Stack>
-                <Text className="text-sm font-normal">Field Roast Chao Cheese Creamy Original</Text>
+                <Text className="text-sm font-normal">
+                  Field Roast Chao Cheese Creamy Original
+                </Text>
                 <Box className="flex items-center">
                   <Rating defaultValue={4.5} size="sm" />
                   <span className="ml-1 text-sm">4.95 out of 5</span>
@@ -101,7 +119,9 @@ const WishList = () => (
               <Checkbox size="xs" />
               <Avatar size="lg" src={product1} />
               <Stack>
-                <Text className="text-sm font-normal">Field Roast Chao Cheese Creamy Original</Text>
+                <Text className="text-sm font-normal">
+                  Field Roast Chao Cheese Creamy Original
+                </Text>
                 <Box className="flex items-center">
                   <Rating defaultValue={4.5} size="sm" />
                   <span className="ml-1 text-sm">4.95 out of 5</span>

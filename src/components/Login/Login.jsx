@@ -47,7 +47,7 @@ const Login = () => {
   const handleSubmit = async (values) => {
     try {
       const response = await axios.post('/auth', JSON.stringify(values));
-      console.log(response.data);
+
       toast.success('Login Successfull', {
         style: {
           borderRadius: '10px',
@@ -141,7 +141,11 @@ const Login = () => {
               {...form.getInputProps('rememberMe', { type: 'checkbox' })}
             />
 
-            <Text component={Link} to="/forget" className="text-xs font-medium sm:text-sm">
+            <Text
+              component={Link}
+              to="/forget"
+              className="text-xs font-medium sm:text-sm"
+            >
               Forget Password
             </Text>
           </Group>

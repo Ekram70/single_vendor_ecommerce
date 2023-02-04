@@ -8,7 +8,11 @@ import SingleSlide from '../SingleSlide/SingleSlide';
 const HeroBanner = () => {
   const slides = bannerData.map((item) => (
     <Carousel.Slide key={item.id}>
-      <SingleSlide image={item.image} title={item.title} subtitle={item.subtitle} />
+      <SingleSlide
+        image={item.image}
+        title={item.title}
+        subtitle={item.subtitle}
+      />
     </Carousel.Slide>
   ));
 

@@ -5,29 +5,35 @@ const ProductDescription = () => (
   <Container className="mb-5 mt-2">
     <Box className="space-y-5 p-4">
       <Text className="text-justify text-sm">
-        Uninhibited carnally hired played in whimpered dear gorilla koala depending and much yikes
-        off acceptably flapped besides and much circa far over the bucolically hey{' '}
+        Uninhibited carnally hired played in whimpered dear gorilla koala
+        depending and much yikes off acceptably flapped besides and much circa
+        far over the bucolically hey{' '}
       </Text>
       <Text className="text-justify text-sm">
-        mastodon goodness gnashed a jellyfish and one however because. Type Of Packing Bottle Color
-        mastodon goodness gnashed a jellyfish and one however because. Type Of Packing Bottle Color
+        mastodon goodness gnashed a jellyfish and one however because. Type Of
+        Packing Bottle Color mastodon goodness gnashed a jellyfish and one
+        however because. Type Of Packing Bottle Color
       </Text>
       <Box>
         <List>
           <List.Item>
-            Type of Packing <span className="ml-5 text-sm text-orange-600">Bottle</span>
+            Type of Packing{' '}
+            <span className="ml-5 text-sm text-orange-600">Bottle</span>
           </List.Item>
           <List.Item>
             Color <span className="ml-12 text-sm text-orange-600">Gray</span>
           </List.Item>
           <List.Item>
-            Quentity Per Case <span className="ml-5 text-sm text-orange-600">25</span>
+            Quentity Per Case{' '}
+            <span className="ml-5 text-sm text-orange-600">25</span>
           </List.Item>
           <List.Item>
-            Ethyl Alcohol <span className="ml-5 text-sm text-orange-600">100ml</span>
+            Ethyl Alcohol{' '}
+            <span className="ml-5 text-sm text-orange-600">100ml</span>
           </List.Item>
           <List.Item>
-            Piece In One <span className="ml-5 text-sm text-orange-600">Carton</span>
+            Piece In One{' '}
+            <span className="ml-5 text-sm text-orange-600">Carton</span>
           </List.Item>
         </List>
       </Box>
@@ -39,7 +45,8 @@ const ProductDescription = () => (
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, itaque.
         </Text>
         <Text className="my-2 text-justify text-sm">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, porro?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+          porro?
         </Text>
       </Box>
       <Box>
@@ -50,7 +57,8 @@ const ProductDescription = () => (
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. A, itaque.
         </Text>
         <Text className="my-2 text-justify text-sm">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, porro?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+          porro?
         </Text>
       </Box>
       <Box>

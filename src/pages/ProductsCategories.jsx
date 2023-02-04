@@ -16,7 +16,9 @@ const ProductsCategories = () => {
     <Box>
       <Container className="w-full max-w-[700px] py-2 lg:max-w-[1200px]">
         <Group
-          className={`my-20 ${!isMobile && 'flex-col'} flex-nowrap items-start justify-between`}
+          className={`my-20 ${
+            !isMobile && 'flex-col'
+          } flex-nowrap items-start justify-between`}
         >
           {isMobile ? (
             <Stack className="basis-[250px] space-y-10">
@@ -27,7 +29,12 @@ const ProductsCategories = () => {
             </Stack>
           ) : (
             <>
-              <Modal centered size="auto" opened={opened} onClose={() => setOpened(false)}>
+              <Modal
+                centered
+                size="auto"
+                opened={opened}
+                onClose={() => setOpened(false)}
+              >
                 <ProductSorting />
                 <ProductAvailability />
                 <ProductsPriceRange />

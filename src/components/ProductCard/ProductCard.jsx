@@ -32,7 +32,10 @@ const ProductCards = ({ product }) => {
           </Text>
         </Group>
 
-        <Button leftIcon={<IconShoppingCart size={18} />} className="text-md text-secondary">
+        <Button
+          leftIcon={<IconShoppingCart size={18} />}
+          className="text-md text-secondary"
+        >
           Add
         </Button>
       </Group>

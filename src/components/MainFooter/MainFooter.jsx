@@ -1,4 +1,14 @@
-import { ActionIcon, Box, Container, Flex, Footer, Group, Stack, Text, Title } from '@mantine/core';
+import {
+  ActionIcon,
+  Box,
+  Container,
+  Flex,
+  Footer,
+  Group,
+  Stack,
+  Text,
+  Title
+} from '@mantine/core';
 import {
   IconBrandFacebook,
   IconBrandInstagram,
@@ -13,7 +23,11 @@ import Logo from '../Logo/Logo';
 const MainFooter = () => (
   <Footer>
     <Container className="w-full max-w-[700px] py-2 lg:max-w-[1200px]">
-      <Flex position="apart" className="items-start justify-between py-6" wrap="wrap">
+      <Flex
+        position="apart"
+        className="items-start justify-between py-6"
+        wrap="wrap"
+      >
         <Box className="mb-4 space-y-3 sm:w-1/3 lg:w-1/4">
           <Logo width={80} />
           <Text className="flex items-center">

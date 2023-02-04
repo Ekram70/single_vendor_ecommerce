@@ -44,7 +44,13 @@ const SingleProduct = () => {
           </Box>
         </Box>
         <Box component="div">
-          <Badge color="yellow" className="mb-3" size="lg" radius="md" variant="filled">
+          <Badge
+            color="yellow"
+            className="mb-3"
+            size="lg"
+            radius="md"
+            variant="filled"
+          >
             Sale off
           </Badge>
           <Title order={4} className="mb-2 font-medium uppercase">
@@ -55,7 +61,9 @@ const SingleProduct = () => {
               <Rating defaultValue={4} />
             </Box>
             <Box component="div">
-              <span className="ml-2 flex items-center text-sm text-gray-500">(32 Reviews)</span>
+              <span className="ml-2 flex items-center text-sm text-gray-500">
+                (32 Reviews)
+              </span>
             </Box>
           </Group>
           <Group className="my-5">
@@ -74,8 +82,9 @@ const SingleProduct = () => {
             </Box>
             <Group>
               <Text className="mt-4  text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores laudantium
-                delectus perferendis deleniti excepturi non, debitis et blanditiis odio voluptate
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Dolores laudantium delectus perferendis deleniti excepturi non,
+                debitis et blanditiis odio voluptate
               </Text>
             </Group>
             <Group position="apart" className="mt-6">
@@ -104,7 +113,11 @@ const SingleProduct = () => {
                   </Button>
                 </Button.Group>
               </Group>
-              <Button radius="md" size="md" leftIcon={<IconShoppingCart size={18} color="#000" />}>
+              <Button
+                radius="md"
+                size="md"
+                leftIcon={<IconShoppingCart size={18} color="#000" />}
+              >
                 Add to cart
               </Button>
               <Button size="md" variant="outline" color="gray" radius="xl">
@@ -122,10 +135,15 @@ const SingleProduct = () => {
           </Group>
           <Group position="apart" className="my-3">
             <Text>
-              Tags: : <span className="text-sm text-yellow-500"> Organic, Snack, Brown</span>
+              Tags: :{' '}
+              <span className="text-sm text-yellow-500">
+                {' '}
+                Organic, Snack, Brown
+              </span>
             </Text>
             <Text>
-              Stock:<span className="text-sm text-yellow-500"> 8 Items in Stock</span>
+              Stock:
+              <span className="text-sm text-yellow-500"> 8 Items in Stock</span>
             </Text>
           </Group>
         </Box>

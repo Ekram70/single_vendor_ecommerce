@@ -40,7 +40,10 @@ const App = () => {
   };
 
   return (
-    <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
+    <ColorSchemeProvider
+      colorScheme={colorScheme}
+      toggleColorScheme={toggleColorScheme}
+    >
       <MantineProvider
         withGlobalStyles
         withNormalizeCSS
@@ -64,8 +67,14 @@ const App = () => {
               <Route element={<DashboardLayout />}>
                 <Route path="/dashboard" element={<UserDashBoard />} />
                 <Route path="/orderhistory" element={<UserOrderHistory />} />
-                <Route path="/useraccountdetails" element={<UserAccountDetails />} />
-                <Route path="/accountsettings" element={<UserAccountSettings />} />
+                <Route
+                  path="/useraccountdetails"
+                  element={<UserAccountDetails />}
+                />
+                <Route
+                  path="/accountsettings"
+                  element={<UserAccountSettings />}
+                />
                 <Route path="/ordertracking" element={<OrderTrackingPage />} />
                 <Route path="/userreviews" element={<UserReviewsPage />} />
                 <Route path="/wishlist" element={<WishListPage />} />

@@ -11,7 +11,11 @@ const SearchBar = () => (
       rightSection: 'w-10'
     }}
     rightSection={
-      <ActionIcon variant="filled" color="brand" className="h-full w-full rounded-l-none">
+      <ActionIcon
+        variant="filled"
+        color="brand"
+        className="h-full w-full rounded-l-none"
+      >
         <IconSearch className="h-6 w-6 stroke-secondary" />
       </ActionIcon>
     }

@@ -77,7 +77,7 @@ const Register = () => {
         headers: { 'Content-Type': 'application/json' },
         withCredentials: true
       });
-      console.log(response.data);
+
       toast.success('Registration Successfull', {
         style: {
           borderRadius: '10px',

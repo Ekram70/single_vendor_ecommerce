@@ -1,4 +1,10 @@
-import { Anchor, Box, Navbar, Text, useMantineColorScheme } from '@mantine/core';
+import {
+  Anchor,
+  Box,
+  Navbar,
+  Text,
+  useMantineColorScheme
+} from '@mantine/core';
 import {
   IconBasket,
   IconGauge,

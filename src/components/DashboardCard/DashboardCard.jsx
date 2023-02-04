@@ -1,5 +1,10 @@
 import { Box, Card, Group, Text, Title } from '@mantine/core';
-import { IconBasket, IconCash, IconShoppingCart, IconStar } from '@tabler/icons';
+import {
+  IconBasket,
+  IconCash,
+  IconShoppingCart,
+  IconStar
+} from '@tabler/icons';
 import React from 'react';
 
 const DashboardCard = () => {
@@ -17,8 +22,9 @@ const DashboardCard = () => {
           Dashboard
         </Title>
         <Text className="text-sm font-medium">
-          From your account dashboard. you can easily check & view your recent orders, manage your
-          shipping and billing addresses and edit your password and account details.
+          From your account dashboard. you can easily check & view your recent
+          orders, manage your shipping and billing addresses and edit your
+          password and account details.
         </Text>
       </Box>
 

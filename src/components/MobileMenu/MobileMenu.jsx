@@ -1,4 +1,10 @@
-import { Burger, Drawer, Group, Space, useMantineColorScheme } from '@mantine/core';
+import {
+  Burger,
+  Drawer,
+  Group,
+  Space,
+  useMantineColorScheme
+} from '@mantine/core';
 import React, { useState } from 'react';
 import useAuth from '../../hooks/useAuth';
 import Cart from '../Cart/Cart';
@@ -17,7 +23,12 @@ const MobileMenu = () => {
 
   return (
     <Group>
-      <Drawer opened={opened} onClose={() => setOpened(false)} padding="xl" size={300}>
+      <Drawer
+        opened={opened}
+        onClose={() => setOpened(false)}
+        padding="xl"
+        size={300}
+      >
         {!isLoggedIn && <LoginMenu />}
         {isLoggedIn && (
           <Group position="apart">

@@ -9,7 +9,9 @@ const SingleSlide = ({ image, title, subtitle }) => (
       <Title order={3} className="text-3xl text-primary lg:text-5xl">
         {title}
       </Title>
-      <Text className="text-xl font-medium text-secondary lg:text-2xl">{subtitle}</Text>
+      <Text className="text-xl font-medium text-secondary lg:text-2xl">
+        {subtitle}
+      </Text>
       <Button>Shop Now</Button>
     </Box>
   </Paper>

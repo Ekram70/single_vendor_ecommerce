@@ -1,4 +1,13 @@
-import { Anchor, Checkbox, Container, Divider, Group, Paper, Stack, Text } from '@mantine/core';
+import {
+  Anchor,
+  Checkbox,
+  Container,
+  Divider,
+  Group,
+  Paper,
+  Stack,
+  Text
+} from '@mantine/core';
 import React from 'react';
 
 const ProductSubCategories = () => (

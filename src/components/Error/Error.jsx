@@ -2,7 +2,7 @@ import { BackgroundImage } from '@mantine/core';
 import React from 'react';
 
 const Error = () => (
-  <BackgroundImage className={` 2xl:bg-auto bg-left-top bg-repeat bg-blend-multiply`}>
+  <BackgroundImage className="2xl:bg-auto bg-left-top bg-repeat bg-blend-multiply">
     <div className="h-screen w-full bg-gray-800">
       <div className="flex items-center justify-center py-12">
         <div className="mx-4 flex w-full items-center justify-center rounded-md border bg-white md:w-2/3">

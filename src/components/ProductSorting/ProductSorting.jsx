@@ -1,4 +1,13 @@
-import { Anchor, Checkbox, Container, Divider, Group, Paper, Stack, Text } from '@mantine/core';
+import {
+  Anchor,
+  Checkbox,
+  Container,
+  Divider,
+  Group,
+  Paper,
+  Stack,
+  Text
+} from '@mantine/core';
 import React from 'react';
 
 const ProductSorting = () => (
@@ -14,7 +23,9 @@ const ProductSorting = () => (
       <Stack>
         <Checkbox
           size="xs"
-          label={<Text className="text-sm font-semibold">Best Selling Items</Text>}
+          label={
+            <Text className="text-sm font-semibold">Best Selling Items</Text>
+          }
           classNames={{
             body: 'items-center'
           }}
@@ -28,14 +39,18 @@ const ProductSorting = () => (
         />
         <Checkbox
           size="xs"
-          label={<Text className="text-sm font-semibold">Price: Low to High</Text>}
+          label={
+            <Text className="text-sm font-semibold">Price: Low to High</Text>
+          }
           classNames={{
             body: 'items-center'
           }}
         />
         <Checkbox
           size="xs"
-          label={<Text className="text-sm font-semibold">Price: High to Low</Text>}
+          label={
+            <Text className="text-sm font-semibold">Price: High to Low</Text>
+          }
           classNames={{
             body: 'items-center'
           }}

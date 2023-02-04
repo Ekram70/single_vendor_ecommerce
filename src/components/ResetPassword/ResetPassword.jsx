@@ -1,4 +1,13 @@
-import { Box, Button, Center, Divider, Paper, PasswordInput, Text, Title } from '@mantine/core';
+import {
+  Box,
+  Button,
+  Center,
+  Divider,
+  Paper,
+  PasswordInput,
+  Text,
+  Title
+} from '@mantine/core';
 import React from 'react';
 
 const ResetPassword = () => (
@@ -13,7 +22,8 @@ const ResetPassword = () => (
       </Title>
       <Divider className="m-auto my-2.5 h-0.5 w-44 border-0 bg-primary" />
       <Title order={6} color="dimmed" className="my-5 text-center">
-        Set the new password for your account so you can login and access all the features.
+        Set the new password for your account so you can login and access all
+        the features.
       </Title>
       <form className="mt-11 space-y-7">
         <Box>
@@ -40,7 +50,9 @@ const ResetPassword = () => (
             }}
           />
         </Box>
-        <Button className="w-full rounded py-2 font-bold">Reset Password</Button>
+        <Button className="w-full rounded py-2 font-bold">
+          Reset Password
+        </Button>
       </form>
     </Paper>
   </Center>

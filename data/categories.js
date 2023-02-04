@@ -34,7 +34,12 @@ const categories = [
       },
       {
         label: 'Sauces & Pickles',
-        subSubCategories: ['Tomato Sauces', 'Pickles', 'Cooking Sauces', 'Other Table Sauces']
+        subSubCategories: [
+          'Tomato Sauces',
+          'Pickles',
+          'Cooking Sauces',
+          'Other Table Sauces'
+        ]
       },
       {
         label: 'Dairy & Eggs',
@@ -314,7 +319,11 @@ const categories = [
       },
       {
         label: 'Baby Food',
-        subSubCategories: ['Milk, Juice & Drinks', 'Baby & Toodler Food', 'Formula']
+        subSubCategories: [
+          'Milk, Juice & Drinks',
+          'Baby & Toodler Food',
+          'Formula'
+        ]
       },
       {
         label: 'Baby Skincare',
@@ -415,7 +424,11 @@ const categories = [
       },
       {
         label: 'Paper Supplies',
-        subSubCategories: ['Printing Paper', 'Diaries & Notebooks', 'Cards & Envelopes']
+        subSubCategories: [
+          'Printing Paper',
+          'Diaries & Notebooks',
+          'Cards & Envelopes'
+        ]
       },
       {
         label: 'School Supplies',
@@ -423,7 +436,11 @@ const categories = [
       },
       {
         label: 'Arts & Crafts',
-        subSubCategories: ['Color Pencils', 'Pastel & Crayon', 'Oil & Watercolor']
+        subSubCategories: [
+          'Color Pencils',
+          'Pastel & Crayon',
+          'Oil & Watercolor'
+        ]
       }
     ]
   },

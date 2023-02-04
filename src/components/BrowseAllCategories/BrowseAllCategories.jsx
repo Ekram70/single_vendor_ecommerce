@@ -62,27 +62,29 @@ const BrowseAllCategories = () => (
                           <HoverCard.Dropdown>
                             <Stack className="gap-0">
                               {subCategory.subSubCategories &&
-                                subCategory.subSubCategories.map((subSubCategory, idx2) => (
-                                  <HoverCard
-                                    key={idx2}
-                                    position="right"
-                                    classNames={{
-                                      dropdown: 'p-0'
-                                    }}
-                                  >
-                                    <HoverCard.Target>
-                                      <Button
-                                        variant="default"
-                                        className="border-none px-3 font-normal"
-                                        classNames={{
-                                          inner: 'justify-start'
-                                        }}
-                                      >
-                                        {subSubCategory}
-                                      </Button>
-                                    </HoverCard.Target>
-                                  </HoverCard>
-                                ))}
+                                subCategory.subSubCategories.map(
+                                  (subSubCategory, idx2) => (
+                                    <HoverCard
+                                      key={idx2}
+                                      position="right"
+                                      classNames={{
+                                        dropdown: 'p-0'
+                                      }}
+                                    >
+                                      <HoverCard.Target>
+                                        <Button
+                                          variant="default"
+                                          className="border-none px-3 font-normal"
+                                          classNames={{
+                                            inner: 'justify-start'
+                                          }}
+                                        >
+                                          {subSubCategory}
+                                        </Button>
+                                      </HoverCard.Target>
+                                    </HoverCard>
+                                  )
+                                )}
                             </Stack>
                           </HoverCard.Dropdown>
                         </HoverCard>

@@ -1,4 +1,14 @@
-import { Avatar, Card, Container, Group, Paper, Rating, Stack, Text, Title } from '@mantine/core';
+import {
+  Avatar,
+  Card,
+  Container,
+  Group,
+  Paper,
+  Rating,
+  Stack,
+  Text,
+  Title
+} from '@mantine/core';
 import React from 'react';
 import profileImage from '../../assets/images/profile.png';
 
@@ -18,8 +28,9 @@ const CustomarReviewsCard = () => (
             <Rating defaultValue={5} />
           </Group>
           <Text className="text-clip text-justify">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum odit excepturi
-            voluptatem a maxime facilis est dolorum eius nobis veniam.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum
+            odit excepturi voluptatem a maxime facilis est dolorum eius nobis
+            veniam.
           </Text>
         </Stack>
       </Card>

@@ -1,4 +1,11 @@
-import { Button, Center, Divider, Paper, Title, useMantineColorScheme } from '@mantine/core';
+import {
+  Button,
+  Center,
+  Divider,
+  Paper,
+  Title,
+  useMantineColorScheme
+} from '@mantine/core';
 
 import React, { useState } from 'react';
 import OtpInput from 'react-otp-input';

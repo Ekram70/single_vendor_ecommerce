@@ -1,4 +1,12 @@
-import { Avatar, Box, Container, Group, Stack, Text, useMantineColorScheme } from '@mantine/core';
+import {
+  Avatar,
+  Box,
+  Container,
+  Group,
+  Stack,
+  Text,
+  useMantineColorScheme
+} from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import React from 'react';
 import profilePic from '../../assets/images/profile.png';
@@ -20,7 +28,9 @@ const DashbordHeader = () => {
             <Avatar className="h-16 w-16 rounded-full" src={profilePic} />
             <Stack className="gap-0">
               <Text className="text-sm font-bold text-neutral-500">Hello,</Text>
-              <Text className="text-xl font-bold md:text-2xl">Dashonte Clark</Text>
+              <Text className="text-xl font-bold md:text-2xl">
+                Dashonte Clark
+              </Text>
             </Stack>
           </Group>
           {!isMobile && <MobileSideNavbar />}

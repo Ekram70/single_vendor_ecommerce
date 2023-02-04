@@ -31,7 +31,9 @@ const Cart = () => {
         >
           <ActionIcon>
             <IconShoppingCart
-              className={`h-6 w-6 ${dark ? 'stroke-primary' : 'stroke-secondary'}`}
+              className={`h-6 w-6 ${
+                dark ? 'stroke-primary' : 'stroke-secondary'
+              }`}
             />
           </ActionIcon>
         </Indicator>

@@ -1,4 +1,12 @@
-import { Anchor, Box, Group, Paper, Rating, Text, Title } from '@mantine/core';
+import {
+  Box,
+  Group,
+  Paper,
+  Rating,
+  Text,
+  Title,
+  UnstyledButton
+} from '@mantine/core';
 import { IconEdit, IconTrash } from '@tabler/icons';
 import React from 'react';
 
@@ -6,26 +14,29 @@ const UserReviews = () => (
   <Box component="main" className="my-5 space-y-5 px-2 pt-5 lg:basis-[78%]">
     <Box>
       <Paper component="div" className="rounded-none p-4" withBorder>
-        <Group position="apart" className="mt-3 px-4">
+        <Group position="apart" className="mt-3">
           <Group>
-            <Title order={5}>
-              Product Name:{' '}
-              <span className="text-sm font-medium">Brand New Body Spray</span>
+            <Title order={5} className="text-sm">
+              Product Name: Brand New Body Spray
             </Title>
           </Group>
-          <Group position="apart">
-            <Anchor>
-              <span className="flex items-center font-medium">
-                {' '}
-                <IconEdit size={18} className="mr-2" /> Edit
-              </span>
-            </Anchor>
-            <Anchor>
-              <span className="flex items-center font-medium">
-                {' '}
-                <IconTrash size={18} className="mr-2" /> Delete
-              </span>
-            </Anchor>
+          <Group>
+            <UnstyledButton>
+              <Group className="gap-2">
+                <IconEdit size={18} />{' '}
+                <Text component="span" className="text-sm">
+                  Edit
+                </Text>
+              </Group>
+            </UnstyledButton>
+            <UnstyledButton>
+              <Group className="gap-2">
+                <IconTrash size={18} />{' '}
+                <Text component="span" className="text-sm">
+                  Delete
+                </Text>
+              </Group>
+            </UnstyledButton>
           </Group>
         </Group>
       </Paper>
@@ -34,7 +45,7 @@ const UserReviews = () => (
           <Rating defaultValue={5} />
         </Group>
         <Group>
-          <Text className="text-justify">
+          <Text className="text-sm">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa
             excepturi perspiciatis incidunt iusto nesciunt similique libero
             totam porro veniam ipsum iure, possimus ad sunt quam laborum quasi
@@ -46,26 +57,29 @@ const UserReviews = () => (
 
     <Box>
       <Paper component="div" className="rounded-none p-4" withBorder>
-        <Group position="apart" className="mt-3 px-4">
+        <Group position="apart" className="mt-3">
           <Group>
-            <Title order={5}>
-              Product Name:{' '}
-              <span className="text-sm font-medium">Brand New Body Spray</span>
+            <Title order={5} className="text-sm">
+              Product Name: Brand New Body Spray
             </Title>
           </Group>
-          <Group position="apart">
-            <Anchor>
-              <span className="flex items-center font-medium">
-                {' '}
-                <IconEdit size={18} className="mr-2" /> Edit
-              </span>
-            </Anchor>
-            <Anchor>
-              <span className="flex items-center font-medium">
-                {' '}
-                <IconTrash size={18} className="mr-2" /> Delete
-              </span>
-            </Anchor>
+          <Group>
+            <UnstyledButton>
+              <Group className="gap-2">
+                <IconEdit size={18} />{' '}
+                <Text component="span" className="text-sm">
+                  Edit
+                </Text>
+              </Group>
+            </UnstyledButton>
+            <UnstyledButton>
+              <Group className="gap-2">
+                <IconTrash size={18} />{' '}
+                <Text component="span" className="text-sm">
+                  Delete
+                </Text>
+              </Group>
+            </UnstyledButton>
           </Group>
         </Group>
       </Paper>
@@ -74,7 +88,7 @@ const UserReviews = () => (
           <Rating defaultValue={5} />
         </Group>
         <Group>
-          <Text className="text-justify">
+          <Text className="text-sm">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa
             excepturi perspiciatis incidunt iusto nesciunt similique libero
             totam porro veniam ipsum iure, possimus ad sunt quam laborum quasi
@@ -83,28 +97,32 @@ const UserReviews = () => (
         </Group>
       </Paper>
     </Box>
+
     <Box>
       <Paper component="div" className="rounded-none p-4" withBorder>
-        <Group position="apart" className="mt-3 px-4">
+        <Group position="apart" className="mt-3">
           <Group>
-            <Title order={5}>
-              Product Name:{' '}
-              <span className="text-sm font-medium">Brand New Body Spray</span>
+            <Title order={5} className="text-sm">
+              Product Name: Brand New Body Spray
             </Title>
           </Group>
-          <Group position="apart">
-            <Anchor>
-              <span className="flex items-center font-medium">
-                {' '}
-                <IconEdit size={18} className="mr-2" /> Edit
-              </span>
-            </Anchor>
-            <Anchor>
-              <span className="flex items-center font-medium">
-                {' '}
-                <IconTrash size={18} className="mr-2" /> Delete
-              </span>
-            </Anchor>
+          <Group>
+            <UnstyledButton>
+              <Group className="gap-2">
+                <IconEdit size={18} />{' '}
+                <Text component="span" className="text-sm">
+                  Edit
+                </Text>
+              </Group>
+            </UnstyledButton>
+            <UnstyledButton>
+              <Group className="gap-2">
+                <IconTrash size={18} />{' '}
+                <Text component="span" className="text-sm">
+                  Delete
+                </Text>
+              </Group>
+            </UnstyledButton>
           </Group>
         </Group>
       </Paper>
@@ -113,7 +131,7 @@ const UserReviews = () => (
           <Rating defaultValue={5} />
         </Group>
         <Group>
-          <Text className="text-justify">
+          <Text className="text-sm">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa
             excepturi perspiciatis incidunt iusto nesciunt similique libero
             totam porro veniam ipsum iure, possimus ad sunt quam laborum quasi

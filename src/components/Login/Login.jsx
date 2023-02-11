@@ -46,7 +46,9 @@ const Login = () => {
 
   const handleSubmit = async (values) => {
     try {
-      const response = await axios.post('/auth', JSON.stringify(values));
+      const response = await axios.post('/auth', JSON.stringify(values), {
+        withCredentials: true
+      });
 
       toast.success('Login Successfull', {
         style: {

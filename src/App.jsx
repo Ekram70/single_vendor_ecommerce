@@ -6,7 +6,8 @@ import AllCategoriesCarosuel from './components/AllCategoriesCarosuel/AllCategor
 import DashboardLayout from './components/DashboardLayout/DashboardLayout';
 import Error from './components/Error/Error';
 import Layout from './components/Layout/Layout';
-// import RequireAuth from './components/RequireAuth/RequireAuth';
+import PersistLogin from './components/PersistLogin/PersistLogin';
+import RequireAuth from './components/RequireAuth/RequireAuth';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
@@ -23,11 +24,11 @@ import UserOrderHistory from './pages/UserOrderHistory';
 import UserReviewsPage from './pages/UserReviewsPage';
 import WishListPage from './pages/WishListPage';
 
-/* const ROLES = {
+const ROLES = {
   Admin: 4759,
   Editor: 1567,
   User: 5698
-}; */
+};
 
 const App = () => {
   const [colorScheme, setColorScheme] = useLocalStorage({
@@ -63,23 +64,31 @@ const App = () => {
               <Route path="/singleproduct" element={<SingleProductPage />} />
 
               {/* Private Routes */}
-              {/* <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}> */}
-              <Route element={<DashboardLayout />}>
-                <Route path="/dashboard" element={<UserDashBoard />} />
-                <Route path="/orderhistory" element={<UserOrderHistory />} />
-                <Route
-                  path="/useraccountdetails"
-                  element={<UserAccountDetails />}
-                />
-                <Route
-                  path="/accountsettings"
-                  element={<UserAccountSettings />}
-                />
-                <Route path="/ordertracking" element={<OrderTrackingPage />} />
-                <Route path="/userreviews" element={<UserReviewsPage />} />
-                <Route path="/wishlist" element={<WishListPage />} />
+              <Route element={<PersistLogin />}>
+                <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>
+                  <Route element={<DashboardLayout />}>
+                    <Route path="/dashboard" element={<UserDashBoard />} />
+                    <Route
+                      path="/orderhistory"
+                      element={<UserOrderHistory />}
+                    />
+                    <Route
+                      path="/useraccountdetails"
+                      element={<UserAccountDetails />}
+                    />
+                    <Route
+                      path="/accountsettings"
+                      element={<UserAccountSettings />}
+                    />
+                    <Route
+                      path="/ordertracking"
+                      element={<OrderTrackingPage />}
+                    />
+                    <Route path="/userreviews" element={<UserReviewsPage />} />
+                    <Route path="/wishlist" element={<WishListPage />} />
+                  </Route>
+                </Route>
               </Route>
-              {/* </Route> */}
 
               {/* component testing in isolation */}
               <Route path="/test" element={<AllCategoriesCarosuel />} />

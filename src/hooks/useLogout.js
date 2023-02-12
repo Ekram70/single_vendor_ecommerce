@@ -4,19 +4,20 @@ import useAuth from './useAuth';
 
 const useLogout = () => {
   const { setAuth } = useAuth();
+  // eslint-disable-next-line no-unused-vars
+  const [isLoggedIn, setIsLoggedIn] = useLocalStorage({
+    key: 'isLoggedIn',
+    defaultValue: false
+  });
 
   const logout = async () => {
-    // eslint-disable-next-line no-unused-vars
-    const [isLoggedIn, setIsLoggedIn] = useLocalStorage({
-      key: 'isLoggedIn',
-      defaultValue: false
-    });
-    setIsLoggedIn(false);
-    setAuth({});
     try {
       await axios('/logout', {
         withCredentials: true
       });
+
+      setIsLoggedIn(false);
+      setAuth({});
     } catch (err) {
       console.log(err);
     }

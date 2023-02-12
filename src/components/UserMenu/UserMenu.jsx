@@ -28,6 +28,14 @@ const UserMenu = () => {
   const signOut = async () => {
     try {
       await logout();
+
+      toast.success('Logout Successfull', {
+        style: {
+          borderRadius: '10px',
+          background: `${dark ? '#2D2D2D' : '#FFF'}`,
+          color: `${dark ? '#FFF' : '#2D2D2D'}`
+        }
+      });
     } catch (error) {
       toast.error('No server response.', {
         style: {

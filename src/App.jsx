@@ -2,12 +2,16 @@ import { ColorSchemeProvider, MantineProvider } from '@mantine/core';
 import { useLocalStorage } from '@mantine/hooks';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import mantineThemeObj from '../config/mantineThemeObj';
+import AdminDashboardLayout from './components/AdminDashboardLayout/AdminDashboardLayout';
 import AllCategoriesCarosuel from './components/AllCategoriesCarosuel/AllCategoriesCarosuel';
 import DashboardLayout from './components/DashboardLayout/DashboardLayout';
 import Error from './components/Error/Error';
 import Layout from './components/Layout/Layout';
 import PersistLogin from './components/PersistLogin/PersistLogin';
 import RequireAuth from './components/RequireAuth/RequireAuth';
+import AdminDashboard from './pages/AdminDashboard';
+import AdminOrdersListsPage from './pages/AdminOrdersListsPage';
+import AdminProductsPage from './pages/AdminProductsPage';
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
@@ -95,6 +99,12 @@ const App = () => {
 
               {/* Not Found route */}
               <Route path="*" element={<Error />} />
+            </Route>
+            {/* admindashboard route */}
+            <Route element={<AdminDashboardLayout />}>
+              <Route path="/admindashboard" element={<AdminDashboard />} />
+              <Route path="/adminproducts" element={<AdminProductsPage />} />
+              <Route path="/adminorders" element={<AdminOrdersListsPage />} />
             </Route>
           </Routes>
         </BrowserRouter>

@@ -19,15 +19,21 @@
     "react/no-array-index-key": 0,
     "react/jsx-props-no-spreading": 0,
     "react/no-unescaped-entities": 0,
+    "no-console": "off",
     "no-useless-escape": "off",
+    "no-param-reassign": "off",
+    "no-unused-expressions": ["error", { "allowShortCircuit": true }],
     "react/function-component-definition": [
       2,
       { "namedComponents": "arrow-function" }
     ],
-    "prettier/prettier": ["error", {
-      "singleQuote": true,
-      "trailingComma" : "none",
-      "endOfLine": "auto"
-    }]
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "trailingComma": "none",
+        "endOfLine": "auto"
+      }
+    ]
   }
 }

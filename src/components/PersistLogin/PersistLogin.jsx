@@ -13,6 +13,8 @@ const PersistLogin = () => {
   const dark = colorScheme === 'dark';
 
   useEffect(() => {
+    let isMounted = true;
+
     const verifyRefreshToken = async () => {
       try {
         await refresh();
@@ -25,7 +27,7 @@ const PersistLogin = () => {
           }
         });
       } finally {
-        setIsLoading(false);
+        isMounted && setIsLoading(false);
       }
     };
     if (!auth?.accessToken) {
@@ -33,6 +35,10 @@ const PersistLogin = () => {
     } else {
       setIsLoading(false);
     }
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   return isLoading ? <p>Loading....</p> : <Outlet />;

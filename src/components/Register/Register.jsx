@@ -14,7 +14,7 @@ import {
 import { useForm, zodResolver } from '@mantine/form';
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import z from 'zod';
 import axios from '../../api/axios';
 import AuthContext from '../../context/AuthProvider';
@@ -53,6 +53,7 @@ const schema = z
 const Register = () => {
   const { colorScheme } = useMantineColorScheme();
   const dark = colorScheme === 'dark';
+  const navigate = useNavigate();
 
   const { setAuth } = useContext(AuthContext);
 
@@ -88,6 +89,7 @@ const Register = () => {
       const { accessToken, roles } = response.data;
       setAuth({ accessToken, roles });
       form.reset();
+      navigate('/');
     } catch (err) {
       if (!err?.response) {
         toast.error('No server response.', {

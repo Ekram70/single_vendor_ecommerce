@@ -1,7 +1,6 @@
 import { Container, Group, Header } from '@mantine/core';
-import { useMediaQuery } from '@mantine/hooks';
+import { useLocalStorage, useMediaQuery } from '@mantine/hooks';
 import React from 'react';
-import useAuth from '../../hooks/useAuth';
 import BrowseAllCategories from '../BrowseAllCategories/BrowseAllCategories';
 import Cart from '../Cart/Cart';
 import Heart from '../Heart/Heart';
@@ -13,8 +12,11 @@ import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import UserMenu from '../UserMenu/UserMenu';
 
 const MainHeader = () => {
-  const { auth } = useAuth();
-  const isLoggedIn = !!auth?.accessToken;
+  // eslint-disable-next-line no-unused-vars
+  const [isLoggedIn, setIsLoggedIn] = useLocalStorage({
+    key: 'isLoggedIn',
+    defaultValue: false
+  });
   const isMobile = useMediaQuery('(min-width: 992px)');
 
   return (

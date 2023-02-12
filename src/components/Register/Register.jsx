@@ -12,6 +12,7 @@ import {
   useMantineColorScheme
 } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
+import { useLocalStorage } from '@mantine/hooks';
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
@@ -54,6 +55,11 @@ const Register = () => {
   const { colorScheme } = useMantineColorScheme();
   const dark = colorScheme === 'dark';
   const navigate = useNavigate();
+  // eslint-disable-next-line no-unused-vars
+  const [isLoggedIn, setIsLoggedIn] = useLocalStorage({
+    key: 'isLoggedIn',
+    defaultValue: false
+  });
 
   const { setAuth } = useContext(AuthContext);
 
@@ -86,8 +92,9 @@ const Register = () => {
           color: `${dark ? '#FFF' : '#2D2D2D'}`
         }
       });
-      const { accessToken, roles } = response.data;
-      setAuth({ accessToken, roles });
+      const { accessToken } = response.data;
+      setIsLoggedIn(true);
+      setAuth({ accessToken });
       form.reset();
       navigate('/');
     } catch (err) {

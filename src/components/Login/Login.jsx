@@ -14,6 +14,7 @@ import {
   useMantineColorScheme
 } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
+import { useLocalStorage } from '@mantine/hooks';
 import React from 'react';
 import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -29,6 +30,11 @@ const schema = z.object({
 const Login = () => {
   const { colorScheme } = useMantineColorScheme();
   const dark = colorScheme === 'dark';
+  // eslint-disable-next-line no-unused-vars
+  const [isLoggedIn, setIsLoggedIn] = useLocalStorage({
+    key: 'isLoggedIn',
+    defaultValue: false
+  });
 
   const { setAuth } = useAuth();
   const navigate = useNavigate();
@@ -57,8 +63,10 @@ const Login = () => {
           color: `${dark ? '#FFF' : '#2D2D2D'}`
         }
       });
-      const { accessToken, roles } = response.data;
-      setAuth({ accessToken, roles });
+      const { accessToken } = response.data;
+      setIsLoggedIn(true);
+      setAuth({ accessToken });
+
       form.reset();
       navigate(from, { replace: true });
     } catch (err) {

@@ -23,7 +23,9 @@ import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import OrderTrackingPage from './pages/OrderTrackingPage';
 import OtpPage from './pages/OtpPage';
+import ProductsCartPage from './pages/ProductsCartPage';
 import ProductsCategories from './pages/ProductsCategories';
+import ProductsCheckoutPage from './pages/ProductsCheckoutPage';
 import RegisterPage from './pages/RegisterPage';
 import ResetPasswordPage from './pages/ResetPasswordPage';
 import SingleProductPage from './pages/SingleProductPage';
@@ -72,6 +74,12 @@ const App = () => {
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/categories" element={<ProductsCategories />} />
               <Route path="/singleproduct" element={<SingleProductPage />} />
+              {/* shop product */}
+              <Route path="/productscart" element={<ProductsCartPage />} />
+              <Route
+                path="/productscheckout"
+                element={<ProductsCheckoutPage />}
+              />
 
               {/* Private Routes */}
               <Route element={<PersistLogin />}>
@@ -105,12 +113,6 @@ const App = () => {
 
               {/* Not Found route */}
               <Route path="*" element={<Error />} />
-            </Route>
-            {/* admindashboard route */}
-            <Route element={<AdminDashboardLayout />}>
-              <Route path="/admindashboard" element={<AdminDashboard />} />
-              <Route path="/adminproducts" element={<AdminProductsPage />} />
-              <Route path="/adminorders" element={<AdminOrdersListsPage />} />
             </Route>
             {/* admindashboard route */}
             <Route element={<AdminDashboardLayout />}>

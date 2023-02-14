@@ -1,10 +1,14 @@
 /* eslint-disable prettier/prettier */
 import {
-  AppShell, Burger, Header, MediaQuery, Navbar, Text, useMantineTheme
+  AppShell, Box, Burger, Group, Header, MediaQuery, Navbar, useMantineTheme
 } from '@mantine/core';
 import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
+import AdminNotificationIcon from '../AdminNotificationIcon/AdminNotificationIcon';
 import AdminSideNav from '../AdminSideNav/AdminSideNav';
+import AdminUserMenu from '../AdminUserMenu/AdminUserMenu';
+import Logo from '../Logo/Logo';
+import ThemeToggle from '../ThemeToggle/ThemeToggle';
 
 const AdminDashboardLayout = () => {
   const theme = useMantineTheme();
@@ -36,8 +40,8 @@ const AdminDashboardLayout = () => {
       }
       header={
         <Header height={{ base: 50, md: 70 }} p="md" className=''>
-          <div
-            style={{ display: 'flex', alignItems: 'center', height: '100%' }}
+          <Box component='div'
+            // style={{ display: 'flex', alignItems: 'center', height: '100%' }}
           >
             <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
               <Burger
@@ -48,9 +52,18 @@ const AdminDashboardLayout = () => {
                 mr="xl"
               />
             </MediaQuery>
-
-        <Text>header </Text>
-          </div>
+            
+              <Group position="apart" className="gap-10 mx-20">
+                <Logo width={48} />
+                <Group>
+                    <Group className="gap-9">
+                      <AdminNotificationIcon/>
+                      <AdminUserMenu/>
+                      <ThemeToggle />
+                    </Group>
+                </Group>
+              </Group>
+          </Box>
         </Header>
       }
     >

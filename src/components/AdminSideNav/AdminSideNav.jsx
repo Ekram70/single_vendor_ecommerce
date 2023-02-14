@@ -10,12 +10,12 @@ const data = [
   { link: '/admindashboard', label: 'Admin Dashboard', icon: IconLayoutDashboard },
   { link: '/adminproducts', label: 'Products', icon: IconShoppingBag },
   { link: '/adminorders', label: 'Orders', icon: IconShoppingCart },
-  { link: '', label: 'Add Product', icon: IconPlus },
-  { link: '', label: 'Transactions', icon: IconCurrencyDollar },
-  { link: '', label: 'Account', icon: IconUserX },
-  { link: '', label: 'Reviews', icon: IconMessage2 },
+  { link: '/addnewproduct', label: 'Add Product', icon: IconPlus },
+  { link: '/transactions', label: 'Transactions', icon: IconCurrencyDollar },
+  { link: '/account', label: 'Account', icon: IconUserX },
+  { link: '/adminreviews', label: 'Reviews', icon: IconMessage2 },
   { link: '', label: 'Statistics', icon: IconPlaystationCircle },
-  { link: '', label: 'Settings', icon: IconSettings }
+  { link: '/adminsetting', label: 'Settings', icon: IconSettings }
 ];
 
 const AdminSideNav = () => {
@@ -46,7 +46,7 @@ const AdminSideNav = () => {
                 <Text component="span" className='my-1'>{singleData.label}</Text>
               </Anchor>
             ))}
-      </Box>
+        </Box>
     );
 
 };

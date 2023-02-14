@@ -9,9 +9,15 @@ import Error from './components/Error/Error';
 import Layout from './components/Layout/Layout';
 import PersistLogin from './components/PersistLogin/PersistLogin';
 import RequireAuth from './components/RequireAuth/RequireAuth';
+import AddNewProductsPage from './pages/AddNewProductsPage';
+import AdminAccountPage from './pages/AdminAccountPage';
 import AdminDashboard from './pages/AdminDashboard';
 import AdminOrdersListsPage from './pages/AdminOrdersListsPage';
 import AdminProductsPage from './pages/AdminProductsPage';
+import AdminReviewsPage from './pages/AdminReviewsPage';
+import AdminSettingPage from './pages/AdminSettingPage';
+import AdminTransactionsPage from './pages/AdminTransactionsPage';
+
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
@@ -105,6 +111,17 @@ const App = () => {
               <Route path="/admindashboard" element={<AdminDashboard />} />
               <Route path="/adminproducts" element={<AdminProductsPage />} />
               <Route path="/adminorders" element={<AdminOrdersListsPage />} />
+            </Route>
+            {/* admindashboard route */}
+            <Route element={<AdminDashboardLayout />}>
+              <Route path="/admindashboard" element={<AdminDashboard />} />
+              <Route path="/adminproducts" element={<AdminProductsPage />} />
+              <Route path="/adminorders" element={<AdminOrdersListsPage />} />
+              <Route path="/adminreviews" element={<AdminReviewsPage />} />
+              <Route path="/transactions" element={<AdminTransactionsPage />} />
+              <Route path="/account" element={<AdminAccountPage />} />
+              <Route path="/adminsetting" element={<AdminSettingPage />} />
+              <Route path="/addnewproduct" element={<AddNewProductsPage />} />
             </Route>
           </Routes>
         </BrowserRouter>

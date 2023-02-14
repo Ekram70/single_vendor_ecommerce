@@ -63,16 +63,32 @@ const UserMenu = () => {
         >
           Dashboard
         </Menu.Item>
-        <Menu.Item component={Link} icon={<IconBasket size={14} />}>
+        <Menu.Item
+          component={Link}
+          to="/orderhistory"
+          icon={<IconBasket size={14} />}
+        >
           My Orders
         </Menu.Item>
-        <Menu.Item component={Link} icon={<IconHistory size={14} />}>
+        <Menu.Item
+          component={Link}
+          to="/ordertracking"
+          icon={<IconHistory size={14} />}
+        >
           Order Tracking
         </Menu.Item>
-        <Menu.Item component={Link} icon={<IconStar size={14} />}>
+        <Menu.Item
+          component={Link}
+          to="/userreviews"
+          icon={<IconStar size={14} />}
+        >
           Reviews
         </Menu.Item>
-        <Menu.Item component={Link} icon={<IconSettings size={14} />}>
+        <Menu.Item
+          component={Link}
+          to="/accountsettings"
+          icon={<IconSettings size={14} />}
+        >
           Settings
         </Menu.Item>
         <Menu.Item

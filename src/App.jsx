@@ -7,7 +7,7 @@ import AllCategoriesCarosuel from './components/AllCategoriesCarosuel/AllCategor
 import DashboardLayout from './components/DashboardLayout/DashboardLayout';
 import Error from './components/Error/Error';
 import Layout from './components/Layout/Layout';
-import PersistLogin from './components/PersistLogin/PersistLogin';
+// import PersistLogin from './components/PersistLogin/PersistLogin';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import AddNewProductsPage from './pages/AddNewProductsPage';
 import AdminAccountPage from './pages/AdminAccountPage';
@@ -82,7 +82,7 @@ const App = () => {
               />
 
               {/* Private Routes */}
-              <Route element={<PersistLogin />}>
+              {/* <Route element={<PersistLogin />}> */}
                 <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>
                   <Route element={<DashboardLayout />}>
                     <Route path="/dashboard" element={<UserDashBoard />} />
@@ -106,7 +106,7 @@ const App = () => {
                     <Route path="/wishlist" element={<WishListPage />} />
                   </Route>
                 </Route>
-              </Route>
+              {/* </Route> */}
 
               {/* component testing in isolation */}
               <Route path="/test" element={<AllCategoriesCarosuel />} />

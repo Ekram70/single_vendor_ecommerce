@@ -1,12 +1,14 @@
 import jwtDecode from 'jwt-decode';
+import { useSelector } from 'react-redux';
 import { Navigate, Outlet, useLocation } from 'react-router-dom';
-import useAuth from '../../hooks/useAuth';
+import { selectCurrentToken } from '../../features/auth/authSlice';
 
 const RequireAuth = ({ allowedRoles }) => {
-  const { auth } = useAuth();
+  const token = useSelector(selectCurrentToken);
   const location = useLocation();
 
-  const decoded = auth?.accessToken ? jwtDecode(auth?.accessToken) : undefined;
+  const decoded = token ? jwtDecode(token) : undefined;
+  console.log(decoded);
 
   const roles = decoded?.roles || [];
 

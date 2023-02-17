@@ -15,6 +15,7 @@
     "@mantine/dates": "^5.10.1",
     "@mantine/form": "^5.10.1",
     "@mantine/hooks": "^5.10.1",
+    "@reduxjs/toolkit": "^1.9.2",
     "@tabler/icons": "^1.119.0",
     "axios": "^1.2.4",
     "dayjs": "^1.11.7",
@@ -24,6 +25,7 @@
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.0",
     "react-otp-input": "^2.4.0",
+    "react-redux": "^8.0.5",
     "react-router-dom": "^6.6.2",
     "zod": "^3.20.2"
   },

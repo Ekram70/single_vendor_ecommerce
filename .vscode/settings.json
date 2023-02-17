@@ -19,5 +19,6 @@
   "emmet.triggerExpansionOnTab": true,
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
-  }
+  },
+  "dotenv.enableAutocloaking": false
 }

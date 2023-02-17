@@ -16,10 +16,13 @@ import {
 import { useForm, zodResolver } from '@mantine/form';
 import { useLocalStorage } from '@mantine/hooks';
 import React from 'react';
-import toast from 'react-hot-toast';
+// import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import z from 'zod';
-import axios from '../../api/axios';
+// import axios from '../../api/axios';
+import { useDispatch } from 'react-redux';
+import { useLoginMutation } from '../../features/auth/authApiSlice';
+import { setCredentials } from '../../features/auth/authSlice';
 import useAuth from '../../hooks/useAuth';
 
 const schema = z.object({
@@ -36,6 +39,9 @@ const Login = () => {
     defaultValue: false
   });
 
+  const [login, { isLoading, isError, isSuccess }] = useLoginMutation();
+  const dispatch = useDispatch();
+
   const { setAuth } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
@@ -51,6 +57,16 @@ const Login = () => {
   });
 
   const handleSubmit = async (values) => {
+    try {
+      const userData = await login(values).unwrap();
+      console.log(userData);
+      dispatch(setCredentials({ ...userData }));
+      setIsLoggedIn(true);
+    } catch (error) {
+      console.log(error.message);
+    }
+
+    /* 
     try {
       const response = await axios.post('/auth', JSON.stringify(values), {
         withCredentials: true
@@ -95,7 +111,7 @@ const Login = () => {
           }
         });
       }
-    }
+    } */
   };
 
   return (

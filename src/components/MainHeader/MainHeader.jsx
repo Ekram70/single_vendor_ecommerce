@@ -17,15 +17,15 @@ const MainHeader = () => {
     key: 'isLoggedIn',
     defaultValue: false
   });
-  const isMobile = useMediaQuery('(min-width: 992px)');
+  const isDesktop = useMediaQuery('(min-width: 992px)');
 
   return (
-    <Header className={isMobile && 'sticky'}>
+    <Header className={isDesktop && 'sticky'}>
       <Container className="w-full max-w-[700px] py-2 lg:max-w-[1200px]">
         <Group position="apart" className="gap-10 py-3">
-          {!isMobile && <MobileMenu />}
+          {!isDesktop && <MobileMenu />}
           <Logo width={48} />
-          {isMobile && (
+          {isDesktop && (
             <>
               <BrowseAllCategories />
               <SearchBar />
@@ -33,14 +33,14 @@ const MainHeader = () => {
           )}
 
           <Group>
-            {isMobile && isLoggedIn && (
+            {isDesktop && isLoggedIn && (
               <Group className="gap-5">
                 <Heart />
                 <Cart />
                 <UserMenu />
               </Group>
             )}
-            {isMobile && !isLoggedIn && <LoginMenu />}
+            {isDesktop && !isLoggedIn && <LoginMenu />}
             <ThemeToggle />
           </Group>
         </Group>

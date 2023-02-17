@@ -9,7 +9,7 @@ import ProductsPriceRange from '../components/ProductsPriceRange/ProductsPriceRa
 import ProductSubCategories from '../components/ProductSubCategories/ProductSubCategories';
 
 const ProductsCategories = () => {
-  const isMobile = useMediaQuery('(min-width: 992px)');
+  const isDesktop = useMediaQuery('(min-width: 992px)');
   const [opened, setOpened] = useState(false);
 
   return (
@@ -17,10 +17,10 @@ const ProductsCategories = () => {
       <Container className="w-full max-w-[700px] py-2 lg:max-w-[1200px]">
         <Group
           className={`my-20 ${
-            !isMobile && 'flex-col'
+            !isDesktop && 'flex-col'
           } flex-nowrap items-start justify-between`}
         >
-          {isMobile ? (
+          {isDesktop ? (
             <Stack className="basis-[250px] space-y-10">
               <ProductSorting />
               <ProductAvailability />

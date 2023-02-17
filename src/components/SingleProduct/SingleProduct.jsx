@@ -24,7 +24,7 @@ import React from 'react';
 import productImage from '../../assets/images/product4.png';
 
 const SingleProduct = () => {
-  const isMobile = useMediaQuery('(min-width: 992px)');
+  const isDesktop = useMediaQuery('(min-width: 992px)');
   const [count, handlers] = useCounter(0, { min: 0, max: 10 });
 
   return (
@@ -33,7 +33,7 @@ const SingleProduct = () => {
         <Group
           position="apart"
           className={`gap-8 ${
-            isMobile && 'flex-nowrap'
+            isDesktop && 'flex-nowrap'
           } items-start justify-center`}
         >
           <Stack>
@@ -82,7 +82,7 @@ const SingleProduct = () => {
               </Paper>
             </Group>
           </Stack>
-          <Box component="div" className={`${isMobile && 'max-w-[65%]'}`}>
+          <Box component="div" className={`${isDesktop && 'max-w-[65%]'}`}>
             <Badge
               color="yellow"
               className="mb-3"

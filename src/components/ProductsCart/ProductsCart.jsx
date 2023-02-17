@@ -64,7 +64,7 @@ const data = [
 
 const ProductsCart = () => {
     const [count, handlers] = useCounter(1, { min: 1, max: 10 });
-    const isMobile = useMediaQuery('(min-width: 576px)');
+    const isMobile = useMediaQuery('(max-width: 576px)');
   return (
     <Box className='my-5'>
       <Box>
@@ -88,7 +88,7 @@ const ProductsCart = () => {
             {
                 data.map((item)=>(
                     <Paper className="my-4 p-4" withBorder>
-                    <Group position="apart" className={`${!isMobile && 'flex-col'}`}>
+                    <Group position="apart" className={`${isMobile && 'flex-col'}`}>
                     <Group className="justify-center gap-0 sm:w-1/2 sm:justify-start">
                         <Image height={120} width={150} size="lg" src={item. image} />
                         <Stack className="items-center gap-0 sm:items-start">

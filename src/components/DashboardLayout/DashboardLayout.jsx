@@ -6,13 +6,13 @@ import DashbordHeader from '../DashbordHeader/DashbordHeader';
 import SideNavbar from '../SideNavbar/SideNavbar';
 
 const DashboardLayout = () => {
-  const isMobile = useMediaQuery('(min-width: 992px)');
+  const isDesktop = useMediaQuery('(min-width: 992px)');
   return (
     <>
       <DashbordHeader />
       <Container className="mb-20 max-w-[700px] lg:max-w-[1200px]">
         <Group className="items-start" position="apart">
-          {isMobile && <SideNavbar />}
+          {isDesktop && <SideNavbar />}
           <Outlet />
         </Group>
       </Container>

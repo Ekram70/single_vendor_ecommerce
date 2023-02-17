@@ -15,7 +15,7 @@ import MobileSideNavbar from '../MobileSideNavbar/MobileSideNavbar';
 const DashbordHeader = () => {
   const { colorScheme } = useMantineColorScheme();
   const dark = colorScheme === 'dark';
-  const isMobile = useMediaQuery('(min-width: 992px)');
+  const isDesktop = useMediaQuery('(min-width: 992px)');
   return (
     <Box component="section">
       <Container
@@ -33,7 +33,7 @@ const DashbordHeader = () => {
               </Text>
             </Stack>
           </Group>
-          {!isMobile && <MobileSideNavbar />}
+          {!isDesktop && <MobileSideNavbar />}
         </Group>
       </Container>
     </Box>

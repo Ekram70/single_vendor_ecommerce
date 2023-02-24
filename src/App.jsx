@@ -7,7 +7,6 @@ import AllCategoriesCarosuel from './components/AllCategoriesCarosuel/AllCategor
 import DashboardLayout from './components/DashboardLayout/DashboardLayout';
 import Error from './components/Error/Error';
 import Layout from './components/Layout/Layout';
-// import PersistLogin from './components/PersistLogin/PersistLogin';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import AddNewProductsPage from './pages/AddNewProductsPage';
 import AdminAccountPage from './pages/AdminAccountPage';
@@ -17,7 +16,6 @@ import AdminProductsPage from './pages/AdminProductsPage';
 import AdminReviewsPage from './pages/AdminReviewsPage';
 import AdminSettingPage from './pages/AdminSettingPage';
 import AdminTransactionsPage from './pages/AdminTransactionsPage';
-
 import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
@@ -82,30 +80,27 @@ const App = () => {
               />
 
               {/* Private Routes */}
-              {/* <Route element={<PersistLogin />}> */}
-                <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>
-                  <Route element={<DashboardLayout />}>
-                    <Route path="/dashboard" element={<UserDashBoard />} />
-                    <Route
-                      path="/orderhistory"
-                      element={<UserOrderHistory />}
-                    />
-                    <Route
-                      path="/useraccountdetails"
-                      element={<UserAccountDetails />}
-                    />
-                    <Route
-                      path="/accountsettings"
-                      element={<UserAccountSettings />}
-                    />
-                    <Route
-                      path="/ordertracking"
-                      element={<OrderTrackingPage />}
-                    />
-                    <Route path="/userreviews" element={<UserReviewsPage />} />
-                    <Route path="/wishlist" element={<WishListPage />} />
-                  </Route>
+
+              <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>
+                <Route element={<DashboardLayout />}>
+                  <Route path="/dashboard" element={<UserDashBoard />} />
+                  <Route path="/orderhistory" element={<UserOrderHistory />} />
+                  <Route
+                    path="/useraccountdetails"
+                    element={<UserAccountDetails />}
+                  />
+                  <Route
+                    path="/accountsettings"
+                    element={<UserAccountSettings />}
+                  />
+                  <Route
+                    path="/ordertracking"
+                    element={<OrderTrackingPage />}
+                  />
+                  <Route path="/userreviews" element={<UserReviewsPage />} />
+                  <Route path="/wishlist" element={<WishListPage />} />
                 </Route>
+              </Route>
               {/* </Route> */}
 
               {/* component testing in isolation */}

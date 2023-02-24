@@ -3,18 +3,15 @@ import { createSlice } from '@reduxjs/toolkit';
 const authSlice = createSlice({
   name: 'auth',
   initialState: {
-    user: null,
     token: null
   },
   reducers: {
     setCredentials: (state, action) => {
-      const { user, accessToken } = action.payload;
-      state.user = user;
+      const { accessToken } = action.payload;
       state.token = accessToken;
     },
     // eslint-disable-next-line no-unused-vars
     logOut: (state, action) => {
-      state.user = null;
       state.token = null;
     }
   }

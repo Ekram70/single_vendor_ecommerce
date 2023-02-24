@@ -1,4 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
+// import logger from 'redux-logger';
 import authReducer from '../features/auth/authSlice';
 import { apiSlice } from './api/apiSlice';
 

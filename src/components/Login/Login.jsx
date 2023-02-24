@@ -15,15 +15,13 @@ import {
 } from '@mantine/core';
 import { useForm, zodResolver } from '@mantine/form';
 import { useLocalStorage } from '@mantine/hooks';
-import React from 'react';
-// import toast from 'react-hot-toast';
+import React, { useEffect } from 'react';
+import toast from 'react-hot-toast';
+import { useDispatch } from 'react-redux';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import z from 'zod';
-// import axios from '../../api/axios';
-import { useDispatch } from 'react-redux';
 import { useLoginMutation } from '../../features/auth/authApiSlice';
 import { setCredentials } from '../../features/auth/authSlice';
-import useAuth from '../../hooks/useAuth';
 
 const schema = z.object({
   email: z.string().email({ message: 'Invalid email' }),
@@ -33,19 +31,24 @@ const schema = z.object({
 const Login = () => {
   const { colorScheme } = useMantineColorScheme();
   const dark = colorScheme === 'dark';
-  // eslint-disable-next-line no-unused-vars
+
+  const [login] = useLoginMutation();
+  const dispatch = useDispatch();
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/';
+
   const [isLoggedIn, setIsLoggedIn] = useLocalStorage({
     key: 'isLoggedIn',
     defaultValue: false
   });
 
-  const [login, { isLoading, isError, isSuccess }] = useLoginMutation();
-  const dispatch = useDispatch();
-
-  const { setAuth } = useAuth();
-  const navigate = useNavigate();
-  const location = useLocation();
-  const from = location.state?.from?.pathname || '/';
+  useEffect(() => {
+    if (isLoggedIn === true) {
+      navigate(from, { replace: true });
+    }
+  }, [isLoggedIn]);
 
   const form = useForm({
     validate: zodResolver(schema),
@@ -59,19 +62,10 @@ const Login = () => {
   const handleSubmit = async (values) => {
     try {
       const userData = await login(values).unwrap();
-      console.log(userData);
       dispatch(setCredentials({ ...userData }));
       setIsLoggedIn(true);
-    } catch (error) {
-      console.log(error.message);
-    }
-
-    /* 
-    try {
-      const response = await axios.post('/auth', JSON.stringify(values), {
-        withCredentials: true
-      });
-
+      form.reset();
+      navigate(from, { replace: true });
       toast.success('Login Successfull', {
         style: {
           borderRadius: '10px',
@@ -79,22 +73,17 @@ const Login = () => {
           color: `${dark ? '#FFF' : '#2D2D2D'}`
         }
       });
-      const { accessToken } = response.data;
-      setIsLoggedIn(true);
-      setAuth({ accessToken });
-
-      form.reset();
-      navigate(from, { replace: true });
-    } catch (err) {
-      if (!err?.response) {
-        toast.error('No server response.', {
+    } catch (error) {
+      const { originalStatus } = error;
+      if (!originalStatus) {
+        toast.error('No server response', {
           style: {
             borderRadius: '10px',
             background: `${dark ? '#2D2D2D' : '#FFF'}`,
             color: `${dark ? '#FFF' : '#2D2D2D'}`
           }
         });
-      } else if (err.response?.status === 401) {
+      } else if (originalStatus === 401) {
         toast.error('Unauthorized', {
           style: {
             borderRadius: '10px',
@@ -111,7 +100,7 @@ const Login = () => {
           }
         });
       }
-    } */
+    }
   };
 
   return (

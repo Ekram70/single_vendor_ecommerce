@@ -81,7 +81,7 @@ const App = () => {
 
               {/* Private Routes */}
 
-              <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>
+           
                 <Route element={<DashboardLayout />}>
                   <Route path="/dashboard" element={<UserDashBoard />} />
                   <Route path="/orderhistory" element={<UserOrderHistory />} />
@@ -100,7 +100,7 @@ const App = () => {
                   <Route path="/userreviews" element={<UserReviewsPage />} />
                   <Route path="/wishlist" element={<WishListPage />} />
                 </Route>
-              </Route>
+           
               {/* </Route> */}
 
               {/* component testing in isolation */}
